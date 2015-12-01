@@ -1,0 +1,42 @@
+{
+    "ts":100,
+
+    "clusterSelector":{
+       "probs":[0.33,0.33,0.33]
+    },
+
+    "clusters":[
+       { "means":[0,0],
+         "cov":[[1,0],[0,1]]
+       },
+       { "means":[10,10],
+         "cov":[[1,0],[0,1]]
+       },
+       { "means":[-10,-10],
+         "cov":[[1,0],[0,1]]
+       }
+    ],
+
+    "events":[
+
+        {  "t":1000,
+           "eventType":"changeSelector",
+           "probs":[1,0,1]
+        },
+
+        {  "t":2000,
+           "eventType":"changeCluster",
+           "nCluster":0,
+           "means":[3,3],
+           "cov":[[1,0],[0,1]]
+        },
+
+        {  "t":3000,
+           "eventType":"changeSelector",
+           "probs":[1,0,0]
+        },
+
+    }
+
+
+}
