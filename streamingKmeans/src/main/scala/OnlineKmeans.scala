@@ -6,6 +6,10 @@ import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.elasticsearch.spark._
 
+/*
+    Author: Antonio Soriano
+ */
+
 object OnlineKmeans extends App{
 
   // Disabling loggers
