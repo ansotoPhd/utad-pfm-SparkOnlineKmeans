@@ -38,6 +38,20 @@
             <version>1.5.2</version>
         </dependency>
 
+        <!-- Kafka to spark -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka_2.10</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.10</artifactId>
+            <version>0.8.2.0</version>
+        </dependency>
+
+
         <!-- Spark to elasticsearch -->
         <dependency>
             <groupId>org.elasticsearch</groupId>

@@ -88,7 +88,8 @@ object Producer extends App{
           // New sample
           val sample = model.drawSample()
 
-          println( "Sample: " + sampleCounter + " Cluster: " + sample._1 + " : " + sample._2.mkString(" ") )
+          if( sampleCounter % 100 == 0)
+            println( "Sample: " + sampleCounter + " Cluster: " + sample._1 + " : " + sample._2.mkString(" ") )
 
           out.write( sample._1 + " -> " + sample._2.mkString(",") )
           out.write("\n")
