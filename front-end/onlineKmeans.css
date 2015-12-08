@@ -1,0 +1,71 @@
+
+div#body{
+}
+
+/* Input */
+/* --------------------------------------------------------- */
+    div#inputFront {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 600px;
+        width: 1200px;
+        background-color: lavender;
+    }
+
+        div#inputButtons{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1200px;
+            height: 50px;
+            text-align: center;
+            vertical-align: central;
+        }
+
+        div#inputChart{
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 500px;
+            height: 500px;
+        }
+
+        div#inputControls{
+            position: absolute;
+            top: 50px;
+            left: 550px;
+            width: 400px;
+            height: 500px;
+            background-color: lightblue;
+        }
+
+/*  Output */
+/* --------------------------------------------------------- */
+
+    div#outputFront {
+        position: absolute;
+        top: 600px;
+        left: 0px;
+        height: 600px;
+        width: 1200px;
+        background-color: mediumslateblue;
+    }
+
+        div#outputButtons{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1200px;
+            height: 50px;
+            text-align: center;
+            vertical-align: central;
+        }
+
+        div#outputChart{
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 800px;
+            height: 500px;
+        }

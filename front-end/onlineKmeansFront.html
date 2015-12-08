@@ -5,203 +5,133 @@
     <title>Proyecto final de master "Experto en Big Data" de U-Tad</title>
     <!-- D3.js library -->
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+
     <!-- CSS file -->
-    <!-- <link rel="stylesheet" type="text/css" href="scatterplot.css"> -->
+    <link rel="stylesheet" type="text/css" href="onlineKmeans.css">
 </head>
 
 <body>       
 
 <!-- 						   HTML  													-->
 <!-- ================================================================================= 	-->
-<button id="wbConnection">Websocket connection</button>
-<button id="wbClose">Websocket close</button>
-<p></p>
+
+<div id="body">
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <div id="inputFront">
+
+        <div id="inputButtons">
+            <button id="wbInputConnection">Websocket connection</button>
+            <button id="wbInputClose">Websocket close</button>
+            <button id="wbInputSendData">SendData</button>
+        </div>
+
+        <div id="inputChart">
+        </div>
+
+        <div id="inputControls">
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="controlGauss0">
+                <p style="text-align: center"> Gaussian component 0</p>
+                <p>
+                    <label for="gauss0_P"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        Probability = <span id="gauss0_P-value"></span>
+                    </label>
+                    <input type="number" min="0" max="1" step="0.01" value="0.33" id="gauss0_P">
+                </p>
+                <p>
+                    <label for="gauss0_xMean"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                           mean.x = <span id="gauss0_xMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="-5" id="gauss0_xMean">
+                </p>
+                <p>
+                    <label  for="gauss0_yMean"
+                            style="display: inline-block; text-align: right; width: 150px;">
+                            mean.y = <span id="gauss0_yMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="-5" id="gauss0_yMean">
+                </p>
+            </div>
+
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="controlGauss1">
+                <p style="text-align: center"> Gaussian component 1</p>
+                <p>
+                    <label for="gauss1_P"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        Probability = <span id="gauss1_P-value"></span>
+                    </label>
+                    <input type="number" min="0" max="1" step="0.01" value="0.33" id="gauss1_P">
+                </p>
+                <p>
+                    <label for="gauss0_xMean"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        mean.x = <span id="gauss1_xMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="0" id="gauss1_xMean">
+                </p>
+                <p>
+                    <label  for="gauss0_yMean"
+                            style="display: inline-block; text-align: right; width: 150px;">
+                        mean.y = <span id="gauss1_yMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="0" id="gauss1_yMean">
+                </p>
+            </div>
+
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="controlGauss2">
+                <p style="text-align: center"> Gaussian component 2</p>
+                <p>
+                    <label for="gauss0_P"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        Probability = <span id="gauss2_P-value"></span>
+                    </label>
+                    <input type="number" min="0" max="1" step="0.01" value="0.33" id="gauss2_P">
+                </p>
+                <p>
+                    <label for="gauss0_xMean"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        mean.x = <span id="gauss2_xMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="5" id="gauss2_xMean">
+                </p>
+                <p>
+                    <label  for="gauss0_yMean"
+                            style="display: inline-block; text-align: right; width: 150px;">
+                        mean.y = <span id="gauss2_yMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="5" id="gauss2_yMean">
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <div id="outputFront">
+
+        <div id="outputButtons">
+            <button id="wbConnection">Websocket connection</button>
+            <button id="wbClose">Websocket close</button>
+        </div>
+
+        <div id="outputChart">
+
+        </div>
+
+    </div>
+</div>
 
 <!-- 						Javascript 													-->
 <!-- ================================================================================= 	-->
-<script type="text/javascript">
 
-// Boton de conexión al websocket --> Función
-	document.getElementById('wbConnection').addEventListener('click', wbConnectionFunc);	
-		function wbConnectionFunc(){
+<script type="text/javascript" src="inputFront.js"></script>
+<script type="text/javascript" src="outputFront.js"></script>
 
-			console.log('Trying to connect to socket');
-
-			wbConnection = new WebSocket('ws://localhost:7080/v2/broker/?topics=centroids3');
-				wbConnection.onopen    = wbOpenFunc;
-				wbConnection.onerror   = wbErrorFunc;
-				wbConnection.onmessage = wbMsnFunc;
-
-			wbConnection2 = new WebSocket('ws://localhost:7080/v2/broker/?topics=rawData');
-				wbConnection2.onopen    = wbOpenFunc2;
-				wbConnection2.onerror   = wbErrorFunc2;
-				wbConnection2.onmessage = wbMsnFunc2;				
-		}	
-
-// Boton de desconexión al websocket
-	document.getElementById('wbClose').addEventListener('click', wbCloseFunc);	
-		function wbCloseFunc(){
-
-			console.log('Closing WebSocket');
-
-			wbConnection.close();
-			wbConnection2.close();
-		}		
-
-// Conexión mediante websocket
-	var wbConnection = null
-	var wbConnection2 = null
-
-	// Apertura del socket
-		var wbOpenFunc = function () {
-		  console.log('Centroids: Connection is open at ', new Date());
-		};
-	// Error en el socket
-		var wbErrorFunc = function (error) {
-		  console.log('WebSocket Error ', error);
-		};
-	// Log messages from the server
-		var wbMsnFunc = function (e) {
-		  console.log('Server centroids: ', e.data, ' at ', new Date());
-		    centroids = ( JSON.parse( JSON.parse(e.data).message ) );
-		    updateCentroids();		  
-		};
-
-	// Apertura del socket
-		var wbOpenFunc2 = function () {
-		  console.log('Data: Connection is open at ', new Date());
-		};
-	// Error en el socket
-		var wbErrorFunc2 = function (error) {
-		  console.log('WebSocket Error ', error);
-		};
-	// Log messages from the server
-		var wbMsnFunc2 = function (e) {
-		  console.log('Server data: ', e.data, ' at ', new Date());
-		    rawdata.unshift( JSON.parse( JSON.parse(e.data).message ) );	  
-		    if( rawdata.length > 50 )
-		    	rawdata.length = 50; 
-		    update();		  
-		};
-
-
-	// Datos de entrada
-	var centroids = [[0,0],[-1,-1],[1,1]];
-	var rawdata   = [];
-
-	// Actualizamos datos de entrada
-	function updateCentroids() {
-	    d3.selectAll('p').remove(); 
-	    d3.selectAll('p').data(centroids).enter().append('p')
-	        .text( function(d) { return d; } ); 
-	    chart.selectAll(".centroid").remove();	
-            chart.selectAll(".centroid")
-                 .data(centroids)
-                 .enter()
-                 .append("circle")
-                 .attr("cx", function(d) {
-                     return cxScale( d[0] );
-                 })
-                 .attr("cy", function(d) {
-                     return cyScale( d[1] );
-                 })
-                 .attr("r", radius )
-                 .attr("class", "centroid")
-                 .attr("fill", "black") ;  	    
-	}
-
-	function update() {
-        	    
-	    chart.selectAll(".rawdata").remove();
-		
-
-        // Procesado de datos
-            var minX = d3.min( rawdata, function(d) { return d[0]; } );
-            var minY = d3.min( rawdata, function(d) { return d[1]; } );
-            var maxX = d3.max( rawdata, function(d) { return d[0]; } );
-            var maxY = d3.max( rawdata, function(d) { return d[1]; } );
-
-        // Scalas
-         	cxScale = d3.scale.linear().domain( [minX, maxX] ).range( [radius, w-radius] );
-        	cyScale = d3.scale.linear().domain( [minY, maxY] ).range([h-radius, radius]);          
-
-            yAxisScale.domain([cyScale.invert(h), cyScale.invert(0)]); 
-            xAxisScale.domain([cxScale.invert(0), cxScale.invert(w)]);
-
-			chart.selectAll(".rawdata")
-                 .data(rawdata)
-                 .enter()
-                 .append("circle")
-                 .attr("cx", function(d) {
-                     return cxScale( d[0] );
-                 })
-                 .attr("cy", function(d) {
-                     return cyScale( d[1] );
-                 })
-                 .attr("r", radius )
-                 .attr("class", "rawdata")
-                 .attr("fill", "yellow") ;    
-
-                               	        
-
-	}
-
-
-    // Área de dibujado
-	    // Márgenes
-	    var margin = {top: 20, right: 150, bottom: 30, left: 40},
-	    // Tamaños totales
-	    width  = 800,  height = 500,
-	    // tamaños sin los márgenes -> área del scatterplot
-	    w = width  - margin.left - margin.right,
-	    h = height - margin.top  - margin.bottom;	
-		var radius = 10;
-
-        // Create SVG element with maximum size
-        var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
-        // Contenedores
-        var chart = svg.append("g").attr( "transform", "translate(" + margin.left + ", " + margin.top + ")" );
-
-        // Procesado de datos
-            var minX = d3.min( centroids, function(d) { return d[0]; } );
-            var minY = d3.min( centroids, function(d) { return d[1]; } );
-            var maxX = d3.max( centroids, function(d) { return d[0]; } );
-            var maxY = d3.max( centroids, function(d) { return d[1]; } );
-
-        // Scalas
-        var cxScale = d3.scale.linear().domain( [minX, maxX] ).range( [radius, w-radius] );
-        var cyScale = d3.scale.linear().domain( [minY, maxY] ).range([h-radius, radius]);          
-
-        // x Axis : We need a scale to set the values.
-            var xAxisScale = d3.scale.linear().domain([cxScale.invert(0), cxScale.invert(w)]).range([0, w]);
-            var xAxis = d3.svg.axis().scale( xAxisScale );
-
-        // y axis: We need a scale again.
-            var yAxisScale = d3.scale.linear().domain([cyScale.invert(h), cyScale.invert(0)]).range([h, 0]);
-            var yAxis = d3.svg.axis().scale( yAxisScale ).orient("left");
-
-            chart.append("g")
-                 .attr("class", "y axis")
-                 .call(yAxis);  
-            chart.append("g")
-                 .attr("class", "x axis")
-                 .attr("transform", "translate(0," + h + ")")
-                 .call(xAxis);            
-
-            chart.selectAll("circle")
-                 .data(centroids)
-                 .enter()
-                 .append("circle")
-                 .attr("cx", function(d) {
-                     return cxScale( d[0] );
-                 })
-                 .attr("cy", function(d) {
-                     return cyScale( d[1] );
-                 })
-                 .attr("r", radius )
-                 .attr("class", "centroid") ;            
-                        	    
-</script>
 
 </body>
 </html>

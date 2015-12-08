@@ -29,6 +29,14 @@ object OnlineKmeans extends App{
           conf.set("es.port","9200")
           conf.set("es.index.auto.create", "true")
 
+  // Kafka producers conf
+    val props = new Properties()
+      props.put( ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092" )
+      props.put( ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
+        "org.apache.kafka.common.serialization.StringSerializer")
+      props.put( ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
+        "org.apache.kafka.common.serialization.StringSerializer")
+
   // Spark streaming context
     val ssc  = new StreamingContext( conf, Seconds(1) )
 
@@ -44,7 +52,7 @@ object OnlineKmeans extends App{
     val inputData = ssc.socketTextStream( "127.0.0.1", 9999 )
 
   // Pre-processing input data
-    val splitted = inputData.map( u => u.split(" -> ") )
+    val splitted     = inputData.map( u => u.split(" -> ") )
     val trainingData = splitted.map( u => u(1).mkString("[","","]") )
     val td = trainingData.map( Vectors.parse )
 
@@ -64,7 +72,7 @@ object OnlineKmeans extends App{
 
     }
 
-  case class Centroid( name: String, data: Array[Double])
+  case class Centroid( name: String, data: Array[Double] )
 
 /*  td.foreachRDD(
     rdd => {  println( "Centroids: " )
@@ -75,22 +83,17 @@ object OnlineKmeans extends App{
          }
   )*/
 
-  val props = new Properties()
 
-  props.put( ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092" )
-  props.put( ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
-    "org.apache.kafka.common.serialization.StringSerializer")
-  props.put( ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
-    "org.apache.kafka.common.serialization.StringSerializer")
 
   td.foreachRDD(
     rdd => {
       println("newRdd")
       val centroids = model.latestModel().clusterCenters.map( _.toString ).mkString("[",",","]")
       val producer = new KafkaProducer[String, String](props)
-      val message = new ProducerRecord[String, String]("centroids3", null, centroids )
+      val message  = new ProducerRecord[String, String]("centroids4", null, centroids )
       println( message )
       producer.send( message )
+      producer.close()
 
       rdd.foreachPartition(
         partitionOfRecords => {
@@ -99,12 +102,13 @@ object OnlineKmeans extends App{
 
           partitionOfRecords.foreach(
             x => {
-              val message = new ProducerRecord[String, String]("rawData", null, x.toString)
+              val message = new ProducerRecord[String, String]("rawData2", null, x.toString)
               println( message )
               producer.send(message)
             }
-
           )
+
+          producer.close()
         }
       )
     }
