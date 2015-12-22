@@ -10,14 +10,15 @@ import org.apache.commons.math3.distribution.MultivariateNormalDistribution;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+
 class ModelMsg{
-    public double p;
+    public double P;
     public double[] mean;
 }
 
 public class ModelChangeConsumer implements Runnable {
 
-    private KafkaStream m_stream;
+    private KafkaStream  m_stream;
     private ClusterModel clusterModel;
 
     /** Constructor */
@@ -37,17 +38,18 @@ public class ModelChangeConsumer implements Runnable {
             // Deserializing it
                 Gson gson = new Gson();
                 Type listType = new TypeToken<ArrayList<ModelMsg>>() {}.getType();
-                ArrayList<ModelMsg> readedModel = gson.fromJson(changeMsg, listType);
+                ArrayList<ModelMsg> readedModel = gson.fromJson( changeMsg, listType );
 
             // Updating clusterModel
 
                 // Categorical distribution --> With normalization
                     float totalProb = 0;
                     for( ModelMsg comp: readedModel )
-                        totalProb += comp.p;
+                        totalProb += comp.P;
                     double[] probs = new double[readedModel.size()];
                     for( int i=0; i< readedModel.size(); i++ )
-                        probs[i] = readedModel.get(i).p / totalProb;
+                        probs[i] = 1.0 / readedModel.size();
+                        //probs[i] = readedModel.get(i).P / totalProb;
                     this.clusterModel.updateCategoricalDist( probs );
 
                 // Gaussian dists
@@ -56,6 +58,9 @@ public class ModelChangeConsumer implements Runnable {
                     for( int i=0; i< readedModel.size(); i++ )
                         gaussians[i] = new MultivariateNormalDistribution( readedModel.get(i).mean, cov );
                     this.clusterModel.updateMvGaussians( gaussians );
+
+                // kmeansModel
+                    this.clusterModel.createKmeansModel();
 
 
             System.out.println( "Msg: " + changeMsg );

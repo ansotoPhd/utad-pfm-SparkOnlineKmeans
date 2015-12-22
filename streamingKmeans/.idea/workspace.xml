@@ -2,26 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e0744a6-db15-4a7c-948e-2d3ecea5d098" name="Default" comment="Testeando git en IntelliJ">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__com_101tec_zkclient_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__com_google_code_gson_gson_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__org_apache_kafka_kafka_2_10_0_8_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__org_apache_kafka_kafka_clients_0_8_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/src/main/java/CustomKafkaConsumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/src/main/java/ModelChangeConsumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Synthetic data producer/src/main/scala/ProducerV2.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5.xml" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1$$anonfun$apply$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/OnlineKmeansVariableK.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/kafkasink.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$4$$anonfun$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$4$$anonfun$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1$$anonfun$apply$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$Centroid$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$Centroid.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Synthetic data producer/1_test.iml" afterPath="$PROJECT_DIR$/../Synthetic data producer/SyntheticProducer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ClusterModel$.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ClusterModel$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ClusterModel.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ClusterModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ModelChangeConsumer$1.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ModelChangeConsumer$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ModelChangeConsumer.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ModelChangeConsumer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ModelMsg.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ModelMsg.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ProducerV2$$anon$1.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ProducerV2$$anon$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ProducerV2$.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ProducerV2$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ProducerV2$delayedInit$body.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/ProducerV2$delayedInit$body.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$$anonfun$2.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$$anonfun$3$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$$anonfun$3$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$$anonfun$3.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$Event$.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$Event$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$Event.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$Event.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$MultinomialDist$.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$MultinomialDist$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$MultinomialDist.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$MultinomialDist.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$delayedInit$body.class" afterPath="$PROJECT_DIR$/../Synthetic data producer/target/classes/SyntheticDataProducer$delayedInit$body.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$4.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$$anonfun$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans$delayedInit$body.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans$delayedInit$body.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnlineKmeans.class" afterPath="$PROJECT_DIR$/target/classes/OnlineKmeans.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Synthetic data producer/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/1_test.iml" afterPath="$PROJECT_DIR$/../Synthetic data producer/1_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/pom.xml" afterPath="$PROJECT_DIR$/../Synthetic data producer/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/onlineKmeansFront.html" afterPath="$PROJECT_DIR$/../front-end/onlineKmeansFront.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/src/main/java/ModelChangeConsumer.java" afterPath="$PROJECT_DIR$/../Synthetic data producer/src/main/java/ModelChangeConsumer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/src/main/scala/ProducerV2.scala" afterPath="$PROJECT_DIR$/../Synthetic data producer/src/main/scala/ProducerV2.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Synthetic data producer/src/main/scala/SyntheticDataProducer.scala" afterPath="$PROJECT_DIR$/../Synthetic data producer/src/main/scala/SyntheticDataProducer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../front-end/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFront.js" afterPath="$PROJECT_DIR$/../front-end/outputFront.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala" afterPath="$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala" />
     </list>
@@ -46,14 +68,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OnlineKmeans.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OnlineKmeans.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18292683">
-              <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="198" selection-end-column="11" />
               <folding>
                 <element signature="e#2#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnlineKmeansVariableK.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeansVariableK.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.98264354">
+              <caret line="174" column="110" selection-start-line="174" selection-start-column="110" selection-end-line="174" selection-end-column="110" />
+              <folding>
+                <element signature="e#2#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kafkasink.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/kafkasink.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3_Arrays.sc" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/3_Arrays.sc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2_Control Structures and Functions.sc" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/2_Control Structures and Functions.sc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="137" column="10" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,6 +144,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/kafkasink.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/OnlineKmeansVariableK.scala" />
       </list>
     </option>
   </component>
@@ -118,9 +186,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1375" />
-    <option name="height" value="904" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -147,6 +215,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,9 +292,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,7 +309,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5850575" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Synthetic data producer" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/2_Control Structures and Functions.sc" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="82" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="102" />
@@ -263,11 +331,29 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/scala" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.OnlineKmeans">
+  <component name="RunManager" selected="Application.OnlineKmeansVariableK">
     <configuration default="false" name="OnlineKmeans" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="OnlineKmeans" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="streamingKmeans" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="OnlineKmeansVariableK" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="OnlineKmeansVariableK" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -569,12 +655,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.OnlineKmeans" />
+      <item index="1" class="java.lang.String" itemvalue="Application.OnlineKmeansVariableK" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.OnlineKmeans" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.OnlineKmeansVariableK" />
+        <item index="1" class="java.lang.String" itemvalue="Application.OnlineKmeans" />
       </list>
     </recent_temporary>
   </component>
@@ -608,32 +696,41 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1375" height="904" extended-state="6" />
+    <frame x="65" y="24" width="1375" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6274809" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13992298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22197141" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24078254" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68421054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2143774" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Settings">
@@ -655,7 +752,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Testeando git en IntelliJ" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -663,6 +762,62 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="198" selection-end-column="11" />
+          <folding>
+            <element signature="e#2#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeansVariableK.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/kafkasink.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/3_Arrays.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/2_Control Structures and Functions.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="10" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -760,18 +915,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.10/1.5.2/spark-mllib_2.10-1.5.2-sources.jar!/org/apache/spark/mllib/clustering/KMeansModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8061856">
+          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.10/1.5.2/spark-mllib_2.10-1.5.2-sources.jar!/org/apache/spark/mllib/clustering/StreamingKMeans.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.490722">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.083871">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="51" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.61503416">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/2_Control Structures and Functions.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="10" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Escritorio/Scala_projects/Scala_for_the_impatient/src/3_Arrays.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeans.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18292683">
-          <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="198" selection-end-column="11" />
+          <folding>
+            <element signature="e#2#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/kafkasink.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/OnlineKmeansVariableK.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.98264354">
+          <caret line="174" column="110" selection-start-line="174" selection-start-column="110" selection-end-line="174" selection-end-column="110" />
           <folding>
             <element signature="e#2#29#0" expanded="true" />
           </folding>

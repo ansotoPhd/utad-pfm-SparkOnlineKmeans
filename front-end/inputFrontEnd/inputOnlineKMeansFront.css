@@ -1,0 +1,58 @@
+
+
+/** Main div */
+div#inputFront {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 700px;
+    width: 1000px;
+    background-color: #040c01;
+}
+
+div#inputVisualization{
+    position: absolute;
+    top:    0px;
+    left:   0px;
+    width:  600px;
+    height: 500px;
+    background-color: rgba(144, 230, 76, 0.6);
+}
+
+div#inputConnection{
+    position:   absolute;
+    top:        0px;
+    left:       600px;
+    width:      400px;
+    height:     500px;
+    text-align: center;
+    vertical-align: central;
+    background-color: lightblue;
+}
+
+div#inputControls{
+    position:   absolute;
+    top:        500px;
+    left:       0px;
+    width:      1000px;
+    height:     200px;
+    background-color: #b70e0a;
+}
+
+div#controlSelectedGauss{
+    position:   absolute;
+    top:        0px;
+    left:       0px;
+    width:      500px;
+    height:     200px;
+    background-color: #b77176;
+}
+
+div#controlNumGaussComp{
+    position:   absolute;
+    top:        0px;
+    left:       500px;
+    width:      500px;
+    height:     200px;
+    background-color: #b73470;
+}

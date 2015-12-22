@@ -11,36 +11,35 @@ import org.json4s._
 
 object SyntheticDataProducer extends App {
 
-  case class MultinomialDist( var probs:Array[Double] )
+  // Auxiliar classes for deserializing Json data
+    case class MultinomialDist( var probs:Array[Double] )
+    case class MvGaussian( means:Array[Double], cov:Array[Array[Double]])
+    case class Event(
+      t         : Int,
+      eventType : String,
+      probs     : Option[ Array[Double] ],
+      nCluster  : Option[ Int ],
+      means     : Option[ Array[Double] ],
+      cov       : Option[ Array[Array[Double]] ]
+    )
 
-  case class MvGaussian( means:Array[Double], cov:Array[Array[Double]])
+  // Generator model class
+    case class ClusterModel( val ts:Int, var events: Array[Event], clusterSelector: MultinomialDist, clusters: Array[MvGaussian] ){
 
-  case class Event(
-    t         : Int,
-    eventType : String,
-    probs     : Option[ Array[Double] ],
-    nCluster  : Option[ Int ],
-    means     : Option[ Array[Double] ],
-    cov       : Option[ Array[Array[Double]] ]
-  )
+      var  categoricalDist = Multinomial( DenseVector( clusterSelector.probs ) )
+      var  mvGaussianArray = for (x <- clusters)
+                             yield new MultivariateNormalDistribution( x.means, x.cov )
 
-  case class ClusterModel( val ts:Int, var events: Array[Event], clusterSelector: MultinomialDist, clusters: Array[MvGaussian] ){
+      // ( cluster label, sample )
+      def drawSample(): ( Int, Array[Double] ) ={
 
-    var  categoricalDist = Multinomial( DenseVector( clusterSelector.probs ) )
-    var  mvGaussianArray = for (x <- clusters)
-                           yield new MultivariateNormalDistribution( x.means, x.cov )
+        // Obtaining cluster number which will generate the new sample
+        val clusterNum = this.categoricalDist.draw();
+        // New sample
+        ( clusterNum, this.mvGaussianArray( clusterNum ).sample() )
+      }
 
-    // ( cluster label, sample )
-    def drawSample(): ( Int, Array[Double] ) ={
-
-      // Obtaining cluster number which will generate the new sample
-      val clusterNum = this.categoricalDist.draw();
-      // New sample
-      ( clusterNum, this.mvGaussianArray( clusterNum ).sample() )
     }
-
-  }
-
 
 
   // Reading model definition from Json; deserializating it.
@@ -51,39 +50,40 @@ object SyntheticDataProducer extends App {
     val json  = org.json4s.native.JsonMethods.parse( modelDef )
     val model = json.extract[ClusterModel]
 
+  // Data generation
+    var t = 0
+    var sampleCounter = 0
+    while( true ) {
 
+      // Events processing
+        val events = model.events.filter( _.t <= t )
+        if( events.size > 0 ){
+          for( e <- events )
+            e.eventType match {
 
-  var t = 0
-  var sampleCounter = 0
-  while( true ) {
+              case "changeSelector" =>{
+                //model.clusterSelector.probs = e.probs.get
+                model.categoricalDist = Multinomial( DenseVector( e.probs.get ) )
+              }
 
-    // Events processing
-      val events = model.events.filter( _.t <= t )
-      if( events.size > 0 ){
-        for( e <- events )
-          e.eventType match {
-            case "changeSelector" =>{
-              //model.clusterSelector.probs = e.probs.get
-              model.categoricalDist = Multinomial( DenseVector( e.probs.get ) )
+              case "changeCluster" =>{
+                model.mvGaussianArray = for( x <- model.clusters )
+                                        yield new MultivariateNormalDistribution( e.means.get, e.cov.get)
+              }
             }
-            case "changeCluster" =>{
-              //model.clusters(e.nCluster.get) = new MvGaussian( e.means.get, e.cov.get )
-              model.mvGaussianArray = for( x <- model.clusters )
-                                      yield new MultivariateNormalDistribution( e.means.get, e.cov.get)
-            }
-          }
-        model.events = model.events.filter( _.t > t )
-      }
 
-    // New sample
-    val sample = model.drawSample()
+          model.events = model.events.filter( _.t > t )
+        }
 
-    println( "Sample: " + sampleCounter + " Cluster: " + sample._1 + " : " + sample._2.mkString(" ") )
+      // New sample
+      val sample = model.drawSample()
 
-    Thread.sleep(100L)
+      println( "Sample: " + sampleCounter + " Cluster: " + sample._1 + " : " + sample._2.mkString(" ") )
 
-    sampleCounter += 1
-    t += model.ts
-  }
+      Thread.sleep(100L)
+
+      sampleCounter += 1
+      t += model.ts
+    }
 
 }

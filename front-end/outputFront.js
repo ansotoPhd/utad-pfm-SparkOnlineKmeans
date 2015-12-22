@@ -16,12 +16,12 @@
 
         console.log('Trying to connect to socket');
 
-        wsCentroids= new WebSocket('ws://localhost:7080/v2/broker/?topics=centroids4');
+        wsCentroids= new WebSocket('ws://localhost:7080/v2/broker/?topics=centroids');
         wsCentroids.onopen    = wsCentroidsOpen;
         wsCentroids.onerror   = wsErrorFunc;
         wsCentroids.onmessage = wsCentroidsMsn;
 
-        wsRawData = new WebSocket('ws://localhost:7080/v2/broker/?topics=rawData2');
+        wsRawData = new WebSocket('ws://localhost:7080/v2/broker/?topics=rawData');
         wsRawData.onopen    = wsRawDataOpen;
         wsRawData.onerror   = wsErrorFunc;
         wsRawData.onmessage = wsRawDataMsn;
@@ -57,13 +57,21 @@
         console.log('Data: Connection is open at ', new Date());
     };
     // Log messages from the server
+
+    var counter = 0;
     var wsRawDataMsn = function (e) {
-        console.log('Server data: ', e.data, ' at ', new Date());
-        rawdata.unshift( JSON.parse( JSON.parse(e.data).message ) );
-        if( rawdata.length > 50 )
+        console.log('Server Raw data: ', e.data, ' at ', new Date());
+        rawdata.unshift(JSON.parse(JSON.parse(e.data).message));
+        if (rawdata.length > 50)
             rawdata.length = 50;
-        updateRawData();
-    };
+        counter++;
+        if (counter % 50 == 0) {
+            counter = 0;
+            updateRawData();
+        }
+
+    }
+
 
 
 // -------------------------------------------------------------------
@@ -82,16 +90,16 @@
         // Márgenes
         var margin = {top: 20, right: 150, bottom: 30, left: 40},
         // Tamaño del elemento SVG
-            width  = 800,  height = 500,
+            outputW  = 800,  outputH = 500,
         // Área asignada a la gráfica
-            w = width  - margin.left - margin.right,
-            h = height - margin.top  - margin.bottom;
+            w = outputW  - margin.left - margin.right,
+            h = outputH - margin.top  - margin.bottom;
         // Tamaño de los puntos del scatterplot
         var radius = 10;
 
     // Creación del elemento SVG y el contenedor para el scatterplot
-        var svg = d3.select("#outputChart").append("svg").attr( "width", width ).attr( "height", height );
-        var chart = svg.append("g").attr( "transform", "translate(" + margin.left + ", " + margin.top + ")" );
+        var outputSvg   = d3.select("#outputChart").append("svg").attr( "width", outputW ).attr( "height", outputH );
+        var outputChart = outputSvg.append("g").attr( "transform", "translate(" + margin.left + ", " + margin.top + ")" );
 
     // Scalado de datos
         var cxScale = d3.scale.linear().domain( [minX, maxX] ).range( [radius, w-radius] );
@@ -104,11 +112,11 @@
         var yAxisScale = d3.scale.linear().domain([cyScale.invert(h), cyScale.invert(0)]).range([h, 0]);
         var yAxis = d3.svg.axis().scale( yAxisScale ).orient("left");
 
-        chart.append("g").attr("class", "y axis").call(yAxis);
-        chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + h + ")").call(xAxis);
+        outputChart.append("g").attr("class", "outputY axis").call(yAxis);
+        outputChart.append("g").attr("class", "outputX axis").attr("transform", "translate(0," + h + ")").call(xAxis);
 
     // Inicializamos gráfica scatterplot
-        chart.selectAll("circle")
+        outputChart.selectAll("circle")
             .data(centroids)
             .enter()
             .append("circle")
@@ -128,8 +136,8 @@
     // Actualizamos centroides
         function updateCentroids() {
 
-            chart.selectAll(".centroid").remove();
-            chart.selectAll(".centroid")
+            outputChart.selectAll(".centroid").remove();
+            outputChart.selectAll(".centroid")
                 .data(centroids)
                 .enter()
                 .append("circle")
@@ -147,25 +155,36 @@
     // Actualizamos raw data
         function updateRawData() {
 
-            chart.selectAll(".rawdata").remove();
+            outputChart.selectAll(".rawdata").remove();
 
             // Procesado de datos
-            var minX = d3.min( rawdata, function(d) { return d[0]; } );
-            var minY = d3.min( rawdata, function(d) { return d[1]; } );
-            var maxX = d3.max( rawdata, function(d) { return d[0]; } );
-            var maxY = d3.max( rawdata, function(d) { return d[1]; } );
+            var minRawX = d3.min( rawdata, function(d) { return d[0]; } );
+            var minRawY = d3.min( rawdata, function(d) { return d[1]; } );
+            var maxRawX = d3.max( rawdata, function(d) { return d[0]; } );
+            var maxRawY = d3.max( rawdata, function(d) { return d[1]; } );
+
+            var minCX = d3.min( centroids, function(d) { return d[0]; } );
+            var minCY = d3.min( centroids, function(d) { return d[1]; } );
+            var maxCX = d3.max( centroids, function(d) { return d[0]; } );
+            var maxCY = d3.max( centroids, function(d) { return d[1]; } );
+
+            var minVx = d3.min([minRawX, minCX]);
+            var maxVx = d3.min([maxRawX, maxCX]);
+
+            var minVy = d3.min([minRawY, minCY]);
+            var maxVy = d3.min([maxRawY, maxCY]);
 
             // Actualización de escalas y ejes
-            cxScale.domain( [minX, maxX] );
-            cyScale.domain( [minY, maxY] );
+            cxScale.domain( [minVx, maxVx] );
+            cyScale.domain( [minVy, maxVy] );
 
             yAxisScale.domain([cyScale.invert(h), cyScale.invert(0)]);
             xAxisScale.domain([cxScale.invert(0), cxScale.invert(w)]);
 
-            svg.select(".y.axis").transition().duration(100).call(yAxis);
-            svg.select(".x.axis").transition().duration(100).call(xAxis);
+            outputSvg.select(".outputY.axis").transition().duration(100).call(yAxis);
+            outputSvg.select(".outputX.axis").transition().duration(100).call(xAxis);
 
-            chart.selectAll(".rawdata")
+            outputChart.selectAll(".rawdata")
                 .data(rawdata)
                 .enter()
                 .append("circle")
