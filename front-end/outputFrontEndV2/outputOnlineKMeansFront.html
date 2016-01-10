@@ -15,41 +15,62 @@
     <!-- 						   HTML  													-->
     <!-- ================================================================================= 	-->
 
+    <div id="header" >
+        <h1>Proyecto final de master "Experto en Big Data" de U-Tad</h1>
+        <h2>Distributed Machine Learning Platform - Streaming k-Means algorithm</h2>
+    </div>
+
     <!-- ----------------------------------------------------------------------------------- -->
 
     <div id="outputFront">
 
         <!-- -------------------------------------------------------------------------- -->
-        <div id="outputButtons">
-            <button id="wbConnection">Websocket connection</button>
-            <button id="wbClose">Websocket close</button>
+        <div id="connectionPanel">
+            <div id="connectionTitle">
+                <p class="title">Connection control</p>
+            </div>
+            <div id="outputButtons" >
+                <p><button id="wbConnection">Websocket connection</button></p>
+                <p><button id="wbClose">Websocket close</button></p>
+            </div>
         </div>
 
         <!-- -------------------------------------------------------------------------- -->
-        <div id="outputChart">
-
+        <div id="scatterplotPanel">
+            <div id="scatterplotTitle">
+                <p class="title">Analyzed data scatterplot / Model centroids / Average distances to centroids</p>
+            </div>
+            <div id="scatterplot"></div>
         </div>
 
         <!-- -------------------------------------------------------------------------- -->
-        <div id="errorPlot">
 
+        <div id="errorPlotPanel">
+            <div id="errorPlotTitle">
+                <p class="title">Cost function</p>
+            </div>
+            <div id="errorPlot"></div>
         </div>
+
 
         <!-- -------------------------------------------------------------------------- -->
         <div id="saPerCluster">
-            <div id="saPerClusterHist">
-
+            <div id="saPerClusterHistTitle">
+                <p class="title">Samples per cluster</p>
             </div>
-            <div id="saPerClusterIndex">
-
+            <div id="saPerClusterHist"></div>
+            <div id="saPerClusterIndexTitle">
+                <p class="title">Homogeneity in samples index</p>
             </div>
+            <div id="saPerClusterIndex"></div>
         </div>
 
         <!-- -------------------------------------------------------------------------- -->
         <div id="distances">
-            <div id="meanCtoSaDist">
-
+            <div id="meanCtoSaDistTitle">
+                <p class="title">Average distances to centroids</p>
             </div>
+            <div id="meanCtoSaDist">  </div>
         </div>
 
     </div>

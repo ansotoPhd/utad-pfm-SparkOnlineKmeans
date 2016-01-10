@@ -2,50 +2,672 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="758fd0d8-c3e9-450e-82d4-cd04eabb43de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../streamingKmeans/src/main/scala/OnlineKmeansVariableK.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../streamingKmeans/src/main/scala/kafkasink.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$4$$anonfun$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$4$$anonfun$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$7$$anonfun$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1$$anonfun$apply$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$7$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$Centroid$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$Centroid.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1_test.iml" afterPath="$PROJECT_DIR$/SyntheticProducer.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__asm_asm_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_clearspring_analytics_stream_2_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_esotericsoftware_kryo_kryo_2_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_esotericsoftware_minlog_minlog_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_esotericsoftware_reflectasm_reflectasm_shaded_1_07.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_scala_2_10_2_4_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_github_fommil_netlib_core_1_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_github_rwl_jtransforms_2_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_ning_compress_lzf_1_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_guice_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_grizzly2_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_test_framework_jersey_test_framework_core_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_jersey_jersey_test_framework_jersey_test_framework_grizzly2_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_twitter_chill_2_10_0_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_twitter_chill_java_0_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_typesafe_akka_akka_actor_2_10_2_3_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_typesafe_akka_akka_remote_2_10_2_3_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_typesafe_akka_akka_slf4j_2_10_2_3_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__com_typesafe_config_1_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_configuration_commons_configuration_1_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_digester_commons_digester_1_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__commons_net_commons_net_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__io_dropwizard_metrics_metrics_core_3_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__io_dropwizard_metrics_metrics_graphite_3_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__io_dropwizard_metrics_metrics_json_3_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jvm_3_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__io_netty_netty_3_8_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__io_netty_netty_all_4_0_29_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__net_java_dev_jets3t_jets3t_0_7_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__net_jpountz_lz4_lz4_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__net_razorvine_pyrolite_4_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__net_sf_py4j_py4j_0_8_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__net_sourceforge_f2j_arpack_combined_all_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_avro_avro_1_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_avro_avro_ipc_1_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_avro_avro_ipc_tests_1_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_avro_avro_mapred_hadoop2_1_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_commons_commons_compress_1_4_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_commons_commons_math3_3_4_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_commons_commons_math_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_curator_curator_client_2_1_0_incubating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_curator_curator_framework_2_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_curator_curator_recipes_2_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_annotations_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_client_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_hdfs_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_app_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_common_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_core_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_jobclient_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_shuffle_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_api_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_client_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_common_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_common_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_ivy_ivy_2_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_mesos_mesos_shaded_protobuf_0_21_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_column_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_common_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_encoding_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_format_2_3_0_incubating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_generator_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_hadoop_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_parquet_parquet_jackson_1_7_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_catalyst_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_core_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_graphx_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_launcher_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_mllib_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_network_common_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_network_shuffle_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_sql_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_streaming_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_spark_spark_unsafe_2_10_1_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_janino_commons_compiler_2_7_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_janino_janino_2_7_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_3_0_0_v201112011016.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_external_management_api_3_0_0_b012.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_gmbal_gmbal_api_only_3_0_0_b023.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_framework_2_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_2_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_server_2_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_servlet_2_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_rcm_2_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_glassfish_javax_servlet_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_jpmml_pmml_agent_1_1_15.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_jpmml_pmml_model_1_1_15.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_jpmml_pmml_schema_1_1_15.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_json4s_json4s_ast_2_10_3_2_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_json4s_json4s_core_2_10_3_2_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_json4s_json4s_jackson_2_10_3_2_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_objenesis_objenesis_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_roaringbitmap_RoaringBitmap_0_4_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scala_lang_scala_compiler_2_10_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scala_lang_scala_library_2_10_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_10_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scala_lang_scalap_2_10_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scalamacros_quasiquotes_2_10_2_0_0_M8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scalanlp_breeze_2_10_0_11_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_scalanlp_breeze_macros_2_10_0_11_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_spark_project_spark_unused_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_spire_math_spire_2_10_0_7_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_spire_math_spire_macros_2_10_0_7_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_tachyonproject_tachyon_client_0_7_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_tachyonproject_tachyon_underfs_hdfs_0_7_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_tachyonproject_tachyon_underfs_local_0_7_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_tukaani_xz_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_uncommons_maths_uncommons_maths_1_2_2a.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__oro_oro_2_0_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/libraries/Maven__xmlenc_xmlenc_0_52.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/scala_compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/BatchVsStreaming.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../BatchVsStreaming/src/main/scala/PreprocessingData.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../streamingKmeans/.idea/libraries/Maven__com_google_code_gson_gson_2_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../streamingKmeans/src/main/java/CustomKafkaConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../streamingKmeans/src/main/java/ModelChangeConsumer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../front-end/.idea/workspace.xml___jb_bak___" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../streamingKmeans/.idea/workspace.xml___jb_bak___" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ClusterModel$$anonfun$createKmeansModel$1.class" afterPath="$PROJECT_DIR$/target/classes/ClusterModel$$anonfun$createKmeansModel$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ClusterModel$.class" afterPath="$PROJECT_DIR$/target/classes/ClusterModel$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ClusterModel.class" afterPath="$PROJECT_DIR$/target/classes/ClusterModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ModelChangeConsumer$1.class" afterPath="$PROJECT_DIR$/target/classes/ModelChangeConsumer$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/CustomKafkaConsumer.class" afterPath="$PROJECT_DIR$/target/classes/CustomKafkaConsumer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ModelChangeConsumer.class" afterPath="$PROJECT_DIR$/target/classes/ModelChangeConsumer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ModelMsg.class" afterPath="$PROJECT_DIR$/target/classes/ModelMsg.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ProducerV2$$anon$1.class" afterPath="$PROJECT_DIR$/target/classes/ProducerV2$$anon$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ProducerV2$.class" afterPath="$PROJECT_DIR$/target/classes/ProducerV2$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ProducerV2$delayedInit$body.class" afterPath="$PROJECT_DIR$/target/classes/ProducerV2$delayedInit$body.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$$anonfun$3$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$$anonfun$3$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$Event$.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$Event$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$Event.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$Event.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$MultinomialDist$.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$MultinomialDist$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$MultinomialDist.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$MultinomialDist.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$delayedInit$body.class" afterPath="$PROJECT_DIR$/target/classes/SyntheticDataProducer$delayedInit$body.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$1.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$4.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$7.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$$anonfun$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/RGraph4.51-stable.zip" afterPath="$PROJECT_DIR$/../front-end/RGraph/RGraph4.51-stable.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/d3.zip" afterPath="$PROJECT_DIR$/../front-end/d3.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$delayedInit$body.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans$delayedInit$body.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeans.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$1.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$10.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$11.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$12.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$13.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$14.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$15.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$16.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$17.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$18.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$19.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$2.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$20.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$21.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$22.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$24.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$25.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$26.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$27.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$5.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$6.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$3.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$4.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$7.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$8.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$9.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$$anonfun$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$delayedInit$body.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK$delayedInit$body.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK.class" afterPath="$PROJECT_DIR$/../streamingKmeans/target/classes/OnlineKmeansVariableK.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ProducerV2.scala" afterPath="$PROJECT_DIR$/src/main/scala/ProducerV2.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/SyntheticDataProducer.scala" afterPath="$PROJECT_DIR$/src/main/scala/SyntheticDataProducer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/.name" afterPath="$PROJECT_DIR$/../front-end/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../front-end/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/front-end.iml" afterPath="$PROJECT_DIR$/../front-end/.idea/front-end.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/misc.xml" afterPath="$PROJECT_DIR$/../front-end/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/modules.xml" afterPath="$PROJECT_DIR$/../front-end/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../front-end/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph.bar.js" afterPath="$PROJECT_DIR$/../front-end/RGraph.bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph.common.core.js" afterPath="$PROJECT_DIR$/../front-end/RGraph.common.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/css/ModalDialog.css" afterPath="$PROJECT_DIR$/../front-end/RGraph/css/ModalDialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/css/animations.css" afterPath="$PROJECT_DIR$/../front-end/RGraph/css/animations.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/css/website.css" afterPath="$PROJECT_DIR$/../front-end/RGraph/css/website.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/default.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-3d-effect-xaxispos-center.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-3d-effect-xaxispos-center.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-3d-effect.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-3d-effect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-ajax.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-animated-pie-chart.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-animated-pie-chart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-annotatable.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-annotatable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-axis-options.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-axis-options.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-background-grid-dotted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-background-grid-dotted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-background-hbars.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-background-hbars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-background-image.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-background-image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-bar-spline.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-bar-spline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-combined-line.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-combined-line.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-combined-vprogress.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-combined-vprogress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-combined2-line.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-combined2-line.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-css3-animations.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-css3-animations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-dark-background.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-dark-background.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-defaults.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-defaults.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-drawing-api-objects.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-drawing-api-objects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-drawing-api.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-drawing-api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-drilldown.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-drilldown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-front-page.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-front-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-grouped.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-grouped.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-grouped2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-grouped2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-grouped3.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-grouped3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-horizontal-gradients.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-horizontal-gradients.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-html-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-html-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-html5-3d-transformations.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-html5-3d-transformations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-in-bar.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-in-bar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-income-expenditure-stacked.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-income-expenditure-stacked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-income-expenditure.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-income-expenditure.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-line-combo.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-line-combo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-line-switch-effect.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-line-switch-effect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-long-labels.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-long-labels.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-multiple-y-axes.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-multiple-y-axes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-numlabels.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-numlabels.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-onmodaldialog-event.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-onmodaldialog-event.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-pie-charts-tooltips.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-pie-charts-tooltips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-pie-combined.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-pie-combined.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-post-processing.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-post-processing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-resizable.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-resizable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-seach-result-clickthru.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-seach-result-clickthru.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-sketch-wedding.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-sketch-wedding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-sketch.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-sketch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-stacked-above-labels.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-stacked-above-labels.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-stacked-click.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-stacked-click.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-stacked.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-stacked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-vprogress-3d.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-vprogress-3d.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-vprogress.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-vprogress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-water-reflection-effect.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bar-water-reflection-effect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-csv.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-csv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-dynamic-updates.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-dynamic-updates.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-json.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-json.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-number.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-number.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-string.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-ajax-string.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-bar.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-bar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-clear.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-clear.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-combined.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-combined.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-csv.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-csv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-csv2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-csv2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dollar-bar.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dollar-bar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dollar-line.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dollar-line.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dollar-pie.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dollar-pie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dual-charts.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-dual-charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-events-bar.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-events-bar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-events-line.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-events-line.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-events-pie.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-events-pie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-gauge.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-gauge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-gradients.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-gradients.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-line.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-line.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-pie.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-pie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-tooltips.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-tooltips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-web-workers.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/basic-web-workers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-3d.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-3d.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-combined-gauge.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-combined-gauge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-csv-data.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-csv-data.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-inverted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-inverted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-world-population.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/bipolar-world-population.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/demos.css" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/demos.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-3d.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-3d.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-in-donut.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-in-donut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-nested.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-nested.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-progress.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-progress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-roundrobin.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/donut-roundrobin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-circle-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-circle-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-image-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-image-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-image-border.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-image-border.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-marker1-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-marker1-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-marker2-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-marker2-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-rect-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-rect-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-rect-heatmap.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-rect-heatmap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-text-button.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-text-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-text-link.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-text-link.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-text.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-xaxis-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-xaxis-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-xaxis-scale.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-xaxis-scale.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-yaxis-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-yaxis-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-yaxis-specific-labels.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/drawing-api-yaxis-specific-labels.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bar-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bar-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bar-wave.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bar-wave.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bipolar-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bipolar-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bipolar-wave.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-bipolar-wave.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-css3-animations.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-css3-animations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-fuel-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-fuel-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-gantt-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-gantt-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-gauge-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-gauge-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-conceal.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-conceal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-contract.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-contract.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-expand.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-expand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularininwards.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularininwards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularinoutwards.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularinoutwards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularoutinwards.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularoutinwards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularoutoutwards.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadecircularoutoutwards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadein.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadein.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadeout.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadeout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadeslidein.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadeslidein.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadeslideout.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-fadeslideout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hblindsclose.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hblindsclose.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hblindsopen.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hblindsopen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hscissorsclose.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hscissorsclose.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hscissorsopen.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-hscissorsopen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-reveal.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-reveal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-revealcircular.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-revealcircular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-slidein.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-slidein.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-slideout.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-slideout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vblindsclose.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vblindsclose.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vblindsopen.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vblindsopen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vscissorsclose.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vscissorsclose.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vscissorsopen.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-generic-vscissorsopen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-hbar-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-hbar-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-hprogress-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-hprogress-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-foldtocenter.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-foldtocenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-trace2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-trace2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-unfold.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-unfold.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-unfoldfromcenter.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-unfoldfromcenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-unfoldfromcentertrace.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-line-unfoldfromcentertrace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-meter-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-meter-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-odo-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-odo-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-explode.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-explode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-implode.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-implode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-roundrobin.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-pie-roundrobin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-radar-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-radar-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-radar-trace.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-radar-trace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-explode.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-explode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-implode.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-implode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-roundrobin.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-rose-roundrobin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-scatter-trace.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-scatter-trace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-thermometer-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-thermometer-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-vprogress-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-vprogress-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-waterfall-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/effects-waterfall-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-ajax.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-effect-interactive.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-effect-interactive.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-interactive.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/fuel-interactive.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/funnel-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/funnel-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/funnel-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/funnel-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/funnel-inverted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/funnel-inverted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gantt-background-grid-dotted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gantt-background-grid-dotted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gantt-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gantt-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gantt-multiple-events.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gantt-multiple-events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-adjustable.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-adjustable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-ajax.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-bank.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-bank.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-customised.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-customised.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-graduated-blue.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-graduated-blue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-skeleton.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/gauge-skeleton.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-ajax.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-background-grid-dotted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-background-grid-dotted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-chrome-speeds.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-chrome-speeds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-drawing-api-xaxis.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-drawing-api-xaxis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-effect-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-effect-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-grouped.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-grouped.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-right-axis.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hbar-right-axis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-bullet.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-bullet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-custom-title.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-custom-title.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/hprogress-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-adjustable-range.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-adjustable-range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-axis-options.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-axis-options.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-background-grid-dotted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-background-grid-dotted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-background-hbars.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-background-hbars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-bar-clipped.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-bar-clipped.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-basic2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-basic2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-big-red.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-big-red.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-black-and-purple.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-black-and-purple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-black-red.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-black-red.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-black.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-black.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-blue-boxed.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-blue-boxed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-blue-green.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-blue-green.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-blue.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-blue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-click-event.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-click-event.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-crosshairs-snap.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-crosshairs-snap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-custom-labels.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-custom-labels.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-defaults.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-defaults.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-different-colors.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-different-colors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color-range.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color-range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color-scrolling.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color-scrolling.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color-threshold.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color-threshold.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-color.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-range.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dual-range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-last-10-minutes.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-last-10-minutes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-scrolling-dual-canvas.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-scrolling-dual-canvas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-scrolling.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-scrolling.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-updates-range.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-updates-range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-updates.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-dynamic-updates.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-effects-scrolling.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-effects-scrolling.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-effects-trace.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-effects-trace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-fan.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-fan.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-filled-spline.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-filled-spline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-filled-tech-sales.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-filled-tech-sales.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-front-page-green-red.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-front-page-green-red.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-front-page.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-front-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-google-analytics.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-google-analytics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-gradient-fill.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-gradient-fill.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-green-filled.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-green-filled.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-green.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-green.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-green2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-green2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-html-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-html-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-linestyle.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-linestyle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-logarithmic-scale.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-logarithmic-scale.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-multiple-y-axes.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-multiple-y-axes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-null-values.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-null-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-orange.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-orange.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-out-of-bounds.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-out-of-bounds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-pink-and-blue.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-pink-and-blue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis-dual-color.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis-dual-color.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis-inverted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis-inverted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-quarter-axis2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range-clickable.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range-clickable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range-clickable2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range-clickable2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range-spline.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range-spline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-range2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-spline-filled.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-spline-filled.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-spline-multiple-lines-array.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-spline-multiple-lines-array.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-spline-multiple-lines.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-spline-multiple-lines.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-stacked-filled.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-stacked-filled.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-static-yaxis.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-static-yaxis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-stepped-trace.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-stepped-trace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-surpressed-alerts.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-surpressed-alerts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-transparency.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-transparency.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-us-prison-population.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-us-prison-population.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-varied-linewidths.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-varied-linewidths.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-xonly.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-xonly.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/line-zerostart.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/line-zerostart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-adjustable.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-adjustable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-basic2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-basic2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-black.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-black.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-circular.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-circular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-circular2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-circular2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-google.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-google.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-image1.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-image1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-image2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-image2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-segmented.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/meter-segmented.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/modaldialog.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/modaldialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/odo-background-image.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/odo-background-image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/odo-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/odo-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/odo-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/odo-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-3d.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-3d.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-ajax-json.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-ajax-json.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-black.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-black.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-border.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-border.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-customised-and-animated.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-customised-and-animated.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-customised.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-customised.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-defaults.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-defaults.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-dollar-syntax.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-dollar-syntax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-east-axis-origin.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-east-axis-origin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-3d.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-3d.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-explode-onclick.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-explode-onclick.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-explode-onmousemove.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-explode-onmousemove.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-roundrobin-then-explode.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-roundrobin-then-explode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-roundrobin-then-explode2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-roundrobin-then-explode2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-roundrobin.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-effects-roundrobin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-explode-when-clicked.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-explode-when-clicked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-front-page.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-front-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-gradients.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-gradients.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-gradients2.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-gradients2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-key-gutter.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-key-gutter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-movie-genre.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-movie-genre.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-pink.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-pink.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-pyramid.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-pyramid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-rectangular.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-rectangular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-tooltips.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/pie-tooltips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-effects-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-effects-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-non-filled.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-non-filled.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-stacked.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/radar-stacked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-3d.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-3d.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-explode-implode-transition.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-explode-implode-transition.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-non-equi-angular.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-non-equi-angular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-offset-start.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-offset-start.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-stacked-csv.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-stacked-csv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-stacked-tooltips.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-stacked-tooltips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-stacked.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rose-stacked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-multiple-datasets-single-array.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/rscatter-multiple-datasets-single-array.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-add-markers.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-add-markers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-axis-options.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-axis-options.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-background-grid-dotted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-background-grid-dotted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-background-hbars.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-background-hbars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-bubble-chart.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-bubble-chart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-crosshairs-snap.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-crosshairs-snap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-date-time-values.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-date-time-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-financial.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-financial.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-gwt.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-gwt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-line-dash.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-line-dash.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-multiple-datasets.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-multiple-datasets.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-negative-x-axis.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-negative-x-axis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-scale.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/scatter-scale.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-dual-scale.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-dual-scale.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-dynamic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-dynamic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-tooltips.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/thermometer-tooltips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-interactive-key.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/vprogress-interactive-key.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-background-grid-dotted.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-background-grid-dotted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-basic.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-csv-reader.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-csv-reader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-grow-multiple-charts.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-grow-multiple-charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-grow.html" afterPath="$PROJECT_DIR$/../front-end/RGraph/demos/waterfall-grow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.bar.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.bipolar.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.bipolar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.annotate.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.annotate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.context.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.context.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.core.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.csv.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.csv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.deprecated.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.dynamic.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.dynamic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.effects.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.key.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.key.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.resizing.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.resizing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.tooltips.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.tooltips.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.zoom.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.common.zoom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.background.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.circle.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.circle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.image.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.marker1.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.marker1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.marker2.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.marker2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.marker3.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.marker3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.poly.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.poly.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.rect.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.rect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.text.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.xaxis.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.xaxis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.yaxis.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.drawing.yaxis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.fuel.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.fuel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.funnel.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.funnel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.gantt.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.gantt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.gauge.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.gauge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.hbar.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.hbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.hprogress.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.hprogress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.line.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.line.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.meter.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.meter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.modaldialog.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.modaldialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.odo.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.odo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.pie.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.pie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.radar.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.radar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.rose.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.rose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.rscatter.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.rscatter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.scatter.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.scatter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.thermometer.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.thermometer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.vprogress.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.vprogress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.waterfall.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/RGraph.waterfall.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/libraries/financial-data.js" afterPath="$PROJECT_DIR$/../front-end/RGraph/libraries/financial-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/license.txt" afterPath="$PROJECT_DIR$/../front-end/RGraph/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/RGraph/scripts/jsmin.txt" afterPath="$PROJECT_DIR$/../front-end/RGraph/scripts/jsmin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/d3/LICENSE" afterPath="$PROJECT_DIR$/../front-end/d3/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/d3/d3.js" afterPath="$PROJECT_DIR$/../front-end/d3/d3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/d3/d3.min.js" afterPath="$PROJECT_DIR$/../front-end/d3/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/dragExample.js" afterPath="$PROJECT_DIR$/../front-end/dragExample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/index.html" afterPath="$PROJECT_DIR$/../front-end/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/inputFront.js" afterPath="$PROJECT_DIR$/../front-end/inputFront.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/inputFrontEnd/d3/d3.min.js" afterPath="$PROJECT_DIR$/../front-end/inputFrontEnd/d3/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/inputFrontEnd/inputOnlineKMeansFront.css" afterPath="$PROJECT_DIR$/../front-end/inputFrontEnd/inputOnlineKMeansFront.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/inputFrontEnd/inputOnlineKMeansFront.html" afterPath="$PROJECT_DIR$/../front-end/inputFrontEnd/inputOnlineKMeansFront.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/inputFrontEnd/inputOnlineKMeansFront.js" afterPath="$PROJECT_DIR$/../front-end/inputFrontEnd/inputOnlineKMeansFront.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/onlineKmeans.css" afterPath="$PROJECT_DIR$/../front-end/onlineKmeans.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/onlineKmeansFront.html" afterPath="$PROJECT_DIR$/../front-end/onlineKmeansFront.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFront.js" afterPath="$PROJECT_DIR$/../front-end/outputFront.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEnd/d3/d3.min.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEnd/d3/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEnd/meanDistancePlot.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEnd/meanDistancePlot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEnd/nSaClusterIndex.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEnd/nSaClusterIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEnd/outputOnlineKMeansFront.css" afterPath="$PROJECT_DIR$/../front-end/outputFrontEnd/outputOnlineKMeansFront.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEnd/outputOnlineKMeansFront.html" afterPath="$PROJECT_DIR$/../front-end/outputFrontEnd/outputOnlineKMeansFront.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEnd/outputOnlineKMeansFront.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEnd/outputOnlineKMeansFront.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEndV2/d3/d3.min.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEndV2/d3/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEndV2/meanDistancePlot.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEndV2/meanDistancePlot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEndV2/nSaClusterIndex.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEndV2/nSaClusterIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEndV2/outputOnlineKMeansFront.css" afterPath="$PROJECT_DIR$/../front-end/outputFrontEndV2/outputOnlineKMeansFront.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEndV2/outputOnlineKMeansFront.html" afterPath="$PROJECT_DIR$/../front-end/outputFrontEndV2/outputOnlineKMeansFront.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/outputFrontEndV2/outputOnlineKMeansFront.js" afterPath="$PROJECT_DIR$/../front-end/outputFrontEndV2/outputOnlineKMeansFront.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/scatterplot.css" afterPath="$PROJECT_DIR$/../front-end/scatterplot.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/scatterplot.html" afterPath="$PROJECT_DIR$/../front-end/scatterplot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../front-end/wbrealtimeexample.html" afterPath="$PROJECT_DIR$/../front-end/wbrealtimeexample.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../streamingKmeans/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/pom.xml" afterPath="$PROJECT_DIR$/../streamingKmeans/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/src/main/scala/OnlineKmeans.scala" afterPath="$PROJECT_DIR$/../streamingKmeans/src/main/scala/OnlineKmeans.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/src/main/scala/OnlineKmeansVariableK.scala" afterPath="$PROJECT_DIR$/../streamingKmeans/src/main/scala/OnlineKmeansVariableK.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../streamingKmeans/streamingKmeans.iml" afterPath="$PROJECT_DIR$/../streamingKmeans/streamingKmeans.iml" />
     </list>
     <ignored path="1_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,14 +690,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProducerV2.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProducerV2.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ProducerV2.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14152204">
-              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyntheticDataProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/SyntheticDataProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6315789">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomKafkaConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding>
+                <element signature="e#1949#1966#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelChangeConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,10 +771,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ConsumerTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ConsumerGroupExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/scala/SyntheticDataProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/scala/ProducerV2.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java" />
       </list>
     </option>
   </component>
@@ -171,7 +835,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,11 +884,34 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Synthetic data producer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -642,30 +1328,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1375" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41463414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22799097" sideWeight="0.6534018" order="0" side_tool="false" content_ui="tabs" x="282" y="100" width="256" height="809" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18585403" sideWeight="0.6534018" order="0" side_tool="false" content_ui="tabs" x="282" y="100" width="256" height="809" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19714071" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17456734" sideWeight="0.3465982" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29139924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27727857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29139924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -684,7 +1370,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java</url>
-          <line>66</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -706,6 +1392,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/ProducerV2.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ProducerV2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -717,10 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,10 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,9 +1437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -944,46 +1630,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0783505">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SyntheticDataProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6513317">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69606006">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.10/1.5.2/spark-mllib_2.10-1.5.2-sources.jar!/org/apache/spark/mllib/linalg/Vectors.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.033771105">
           <caret line="475" column="9" selection-start-line="475" selection-start-column="9" selection-end-line="475" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2016021">
-          <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,13 +1644,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ModelChangeConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomKafkaConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#1949#1966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ProducerV2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14152204">
-          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/SyntheticDataProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6315789">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -7,6 +7,7 @@ import org.apache.commons.math3.distribution.MultivariateNormalDistribution
 import org.apache.spark.mllib.clustering.KMeansModel
 import org.apache.spark.mllib.linalg.{Vector, Vectors}
 
+/** Synthetic data generator model */
 case class ClusterModel( val ts:Int ) {
 
   var categoricalDist: Multinomial[DenseVector[Double], Int] = null
@@ -58,7 +59,7 @@ object ProducerV2 extends App{
   // Kafka consumer --> Updates model when a msn is received
     val zooKeeper:String = "localhost:2181"
     val groupId:String   = "default"
-    val topic:String     = "model2"
+    val topic:String     = "inputModel"
     val consumer: CustomKafkaConsumer = new CustomKafkaConsumer( zooKeeper, groupId, topic )
 
     consumer.run( model )
@@ -80,7 +81,7 @@ object ProducerV2 extends App{
 
         val out = new PrintWriter( socket.getOutputStream(), true )
 
-        while( true ) {
+        while( !socket.isOutputShutdown ) {
 
           // New sample
           try {

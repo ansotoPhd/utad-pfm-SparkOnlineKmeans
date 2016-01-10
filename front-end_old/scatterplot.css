@@ -1,0 +1,32 @@
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+}
+
+button {
+    position: relative;
+    right: 135px;
+    top: -20px;
+}
+
+svg {
+	background-color: #EFEFFB;
+    border-style: solid;
+    border-radius: 21px 21px 21px 21px;
+    border-width: 5px;	
+}
+
+.legendBorder {
+	fill:none;
+	stroke:black;
+	stroke-width:2;
+}

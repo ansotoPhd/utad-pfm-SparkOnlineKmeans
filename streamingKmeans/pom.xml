@@ -72,6 +72,12 @@
             <version>3.3.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.5</version>
+        </dependency>
+
         <!-- Mathematics and statistics for Java -->
         <dependency>
             <groupId>org.apache.commons</groupId>

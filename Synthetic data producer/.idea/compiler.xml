@@ -24,10 +24,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="1_test" />
+        <module name="SyntheticProducer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="1_test" target="1.5" />
+      <module name="SyntheticProducer" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

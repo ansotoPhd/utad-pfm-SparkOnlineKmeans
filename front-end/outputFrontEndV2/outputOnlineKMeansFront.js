@@ -157,7 +157,7 @@
         var radius = 5;
 
     // Creación del elemento SVG y el contenedor para el scatterplot
-        var outputSvg   = d3.select("#outputChart").append("svg").attr( "width", outputW ).attr( "height", outputH );
+        var outputSvg   = d3.select("#scatterplot").append("svg").attr( "width", outputW ).attr( "height", outputH );
         var outputChart = outputSvg.append("g").attr( "transform", "translate(" + margin.left + ", " + margin.top + ")" );
 
     // Scalado de datos

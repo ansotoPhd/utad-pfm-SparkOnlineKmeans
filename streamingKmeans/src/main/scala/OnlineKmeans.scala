@@ -236,6 +236,7 @@ object OnlineKmeans extends App{
       rdd => {  println( "Centroids: " )
               case class Centroid( name: String, data: Array[Double] )
               model.latestModel().clusterCenters.foreach( u => println( u.toString ) )
+
               rdd.map( u => new Centroid( "centroid", u.toArray)).saveToEs("spark/docs")
 
            }

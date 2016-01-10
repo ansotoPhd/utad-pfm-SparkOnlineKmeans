@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Proyecto final de master "Experto en Big Data" de U-Tad</title>
+    <!-- D3.js library -->
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="onlineKmeans.css">
+</head>
+
+<body>       
+
+<!-- 						   HTML  													-->
+<!-- ================================================================================= 	-->
+
+<div id="body">
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <div id="inputFront">
+
+        <div id="inputButtons">
+            <button id="wbInputConnection">Websocket connection</button>
+            <button id="wbInputClose">Websocket close</button>
+            <button id="wbInputSendData">SendData</button>
+        </div>
+
+        <div id="inputChart">
+        </div>
+
+        <div id="inputControls">
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="controlGauss0">
+                <p style="text-align: center"> Gaussian component 0</p>
+                <p>
+                    <label for="gauss0_P"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        Probability = <span id="gauss0_P-value"></span>
+                    </label>
+                    <input type="number" min="0" max="1" step="0.01" value="0.33" id="gauss0_P">
+                </p>
+                <p>
+                    <label for="gauss0_xMean"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                           mean.x = <span id="gauss0_xMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="-5" id="gauss0_xMean">
+                </p>
+                <p>
+                    <label  for="gauss0_yMean"
+                            style="display: inline-block; text-align: right; width: 150px;">
+                            mean.y = <span id="gauss0_yMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="-5" id="gauss0_yMean">
+                </p>
+            </div>
+
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="controlGauss1">
+                <p style="text-align: center"> Gaussian component 1</p>
+                <p>
+                    <label for="gauss1_P"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        Probability = <span id="gauss1_P-value"></span>
+                    </label>
+                    <input type="number" min="0" max="1" step="0.01" value="0.33" id="gauss1_P">
+                </p>
+                <p>
+                    <label for="gauss0_xMean"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        mean.x = <span id="gauss1_xMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="0" id="gauss1_xMean">
+                </p>
+                <p>
+                    <label  for="gauss0_yMean"
+                            style="display: inline-block; text-align: right; width: 150px;">
+                        mean.y = <span id="gauss1_yMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="0" id="gauss1_yMean">
+                </p>
+            </div>
+
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="controlGauss2">
+                <p style="text-align: center"> Gaussian component 2</p>
+                <p>
+                    <label for="gauss0_P"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        Probability = <span id="gauss2_P-value"></span>
+                    </label>
+                    <input type="number" min="0" max="1" step="0.01" value="0.33" id="gauss2_P">
+                </p>
+                <p>
+                    <label for="gauss0_xMean"
+                           style="display: inline-block; text-align: right; width: 150px;">
+                        mean.x = <span id="gauss2_xMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="5" id="gauss2_xMean">
+                </p>
+                <p>
+                    <label  for="gauss0_yMean"
+                            style="display: inline-block; text-align: right; width: 150px;">
+                        mean.y = <span id="gauss2_yMean-value"></span>
+                    </label>
+                    <input type="number" min="-100" max="100" step="1" value="5" id="gauss2_yMean">
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <div id="outputFront">
+
+        <div id="outputButtons">
+            <button id="wbConnection">Websocket connection</button>
+            <button id="wbClose">Websocket close</button>
+        </div>
+
+        <div id="outputChart">
+
+        </div>
+
+    </div>
+</div>
+
+<!-- 						Javascript 													-->
+<!-- ================================================================================= 	-->
+
+<script type="text/javascript" src="inputFront.js"></script>
+<script type="text/javascript" src="outputFront.js"></script>
+
+
+</body>
+</html>

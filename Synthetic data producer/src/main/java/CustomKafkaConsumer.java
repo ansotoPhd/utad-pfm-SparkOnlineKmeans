@@ -30,6 +30,18 @@ public class CustomKafkaConsumer {
         this.topic  = a_topic;
     }
 
+    private static ConsumerConfig createConsumerConfig( String a_zookeeper, String a_groupId ) {
+
+        Properties props = new Properties();
+        props.put("zookeeper.connect", a_zookeeper);
+        props.put("group.id", a_groupId);
+        props.put("zookeeper.session.timeout.ms", "400");
+        props.put("zookeeper.sync.time.ms", "200");
+        props.put("auto.commit.interval.ms", "1000");
+
+        return new ConsumerConfig( props );
+    }
+
     public void shutdown() {
         if (consumer != null) consumer.shutdown();
         if (executor != null) executor.shutdown();
@@ -57,18 +69,6 @@ public class CustomKafkaConsumer {
         for( final KafkaStream stream : streams ) {
             executor.submit( new ModelChangeConsumer( stream, clusterModel ) );
         }
-    }
-
-    private static ConsumerConfig createConsumerConfig( String a_zookeeper, String a_groupId ) {
-
-        Properties props = new Properties();
-            props.put("zookeeper.connect", a_zookeeper);
-            props.put("group.id", a_groupId);
-            props.put("zookeeper.session.timeout.ms", "400");
-            props.put("zookeeper.sync.time.ms", "200");
-            props.put("auto.commit.interval.ms", "1000");
-
-        return new ConsumerConfig( props );
     }
 
 }

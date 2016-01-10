@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 
 class ModelMsg{
-    public double P;
-    public double[] mean;
+    public double[]   mean;
+    public double[][] cov;
 }
 
 public class ModelChangeConsumer implements Runnable {
@@ -43,20 +43,16 @@ public class ModelChangeConsumer implements Runnable {
             // Updating clusterModel
 
                 // Categorical distribution --> With normalization
-                    float totalProb = 0;
-                    for( ModelMsg comp: readedModel )
-                        totalProb += comp.P;
                     double[] probs = new double[readedModel.size()];
                     for( int i=0; i< readedModel.size(); i++ )
                         probs[i] = 1.0 / readedModel.size();
-                        //probs[i] = readedModel.get(i).P / totalProb;
                     this.clusterModel.updateCategoricalDist( probs );
 
                 // Gaussian dists
                     double[][] cov = {{1,0},{0,1}};
                     MultivariateNormalDistribution[] gaussians = new MultivariateNormalDistribution[readedModel.size()];
                     for( int i=0; i< readedModel.size(); i++ )
-                        gaussians[i] = new MultivariateNormalDistribution( readedModel.get(i).mean, cov );
+                        gaussians[i] = new MultivariateNormalDistribution( readedModel.get(i).mean, readedModel.get(i).cov );
                     this.clusterModel.updateMvGaussians( gaussians );
 
                 // kmeansModel

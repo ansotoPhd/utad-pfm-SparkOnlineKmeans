@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RDV</title>
+    <!-- Include the RGraph libraries -->
+    <script src="RGraph.common.core.js" ></script>
+    <script src="RGraph.bar.js" ></script>
+
+</head>
+<body>
+
+<h1>RDV</h1>
+<canvas id="nic" width="600" height="250">[No canvas support]</canvas><br />
+
+<script>
+    window.onload = function ()
+    {
+        start();
+    }
+    function DrawGraph(data)
+    {
+        RGraph.Reset(document.getElementById("nic"));
+        var bar = new RGraph.Bar('nic', data)
+                .Set('gutter.left', 35)
+                .Set('title', 'NIC')
+                .Set('labels', ['Read KB/s'])
+                .Draw();
+    }
+    function start()
+    {
+        var connection = new WebSocket('ws://localhost:7080/v2/broker/?topics=cost');
+        connection.onopen = function () {
+        };
+        data1 = new Array();
+        connection.onmessage = function(evt) {
+            data1[0]=10*parseInt(evt.data);
+            DrawGraph(data1);
+        };
+    }
+</script>
+</body>
+</html>

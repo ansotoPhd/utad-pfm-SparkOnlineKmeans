@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Scatterplot - Prácticas de curso "Experto en Big Data" de U-Tad</title>
+    <!-- D3.js library -->
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="scatterplot.css">
+    <!-- Dataset in a separate js file: var dataset -->
+    <script type="text/javascript" src="dataset_scatterplot.js"></script>
+</head>
+
+<body>       
+
+    <script type="text/javascript">
+
+        // Área de dibujado
+            // Márgenes
+            var margin = {top: 20, right: 150, bottom: 30, left: 40},
+            // Tamaños totales
+            width  = 800,
+            height = 500,
+            // tamaños sin los márgenes -> área del scatterplot
+            w = width  - margin.left - margin.right,
+            h = height - margin.top  - margin.bottom;
+
+        // Datos: var dataset = [[cx,cy,V],...] 
+            var minX = d3.min( dataset, function(d) { return d[0]; } );
+            var minY = d3.min( dataset, function(d) { return d[1]; } );
+
+            var maxX = d3.max( dataset, function(d) { return d[0]; } );
+            var maxY = d3.max( dataset, function(d) { return d[1]; } );
+
+            var minV = d3.min( dataset, function(d) { return d[2]; } );
+            var maxV = d3.max( dataset, function(d) { return d[2]; } );
+
+            var maxRadius = 20;
+            var minRadius = maxRadius / 2;  
+
+        // Escalas
+            var radiusScale = d3.scale.linear().domain( [minV, maxV] ).range( [minRadius, maxRadius] );                       
+            var cxScale = d3.scale.linear().domain( [minX, maxX] ).range( [maxRadius, w-maxRadius] );
+            var cyScale = d3.scale.linear().domain( [minY, maxY] ).range([h-maxRadius, maxRadius]);     // Mirror en eje y       
+            var opacityScale = d3.scale.linear().domain( [minRadius, maxRadius] ).range([1,0.5]);       // Mirror en eje y   
+
+
+        // x Axis : We need a scale to set the values.
+            var xAxisScale = d3.scale.linear()
+                           .domain([cxScale.invert(0), cxScale.invert(w)])
+                           .range([0, w]);
+
+            var xAxis = d3.svg.axis()
+                          .scale(xAxisScale);
+
+        // y axis: We need a scale again.
+            var yAxisScale = d3.scale.linear()
+                           .domain([cyScale.invert(h), cyScale.invert(0)])
+                           .range([h, 0]);
+
+            var yAxis = d3.svg.axis()
+                          .scale(yAxisScale)
+                          .orient("left");
+
+
+        // Pan y zoom
+        // ------------------------------------------------------------------------------------------------------                  
+        function zoomed() {
+
+            // Zoom en puntos
+              zoomPoint.scale(zoom.scale());
+              zoomPoint.translate(zoom.translate());
+
+            // Zoom en Axis  
+              svg.select(".x.axis").call(xAxis);
+              svg.select(".y.axis").call(yAxis);
+
+            // Filtro 
+                chart.selectAll(".data-point").attr("cx", function(d) {
+                         return cxScale( d[0] );
+                     }).attr("cy", function(d) {
+                         return cyScale( d[1] );
+                     })
+                     .attr("r", function(d) {
+                         return ( cxScale( d[0] ) - radiusScale( d[2] ) > 0  && 
+                                  cxScale( d[0] ) + radiusScale( d[2] ) < w  && 
+                                  cyScale( d[1] ) - radiusScale( d[2] ) > 0  &&
+                                  cyScale( d[1] ) + radiusScale( d[2] ) < h  
+
+                                  ? radiusScale( d[2] ) : 0 )   ;
+                     }) ;
+
+       
+                chart.selectAll(".labels")
+                     .attr("x", function(d, i) {
+                         return cxScale( d[0] );
+                     })
+                     .attr("y", function(d) {
+                         return cyScale( d[1] ) - radiusScale( d[2] )  - 3;
+                     })
+                     .attr("font-size", function(d) {
+                         return ( cxScale( d[0] ) - radiusScale( d[2] ) > 0  && 
+                                  cxScale( d[0] ) + radiusScale( d[2] ) < w  && 
+                                  cyScale( d[1] ) - radiusScale( d[2] ) > 0  &&
+                                  cyScale( d[1] ) + radiusScale( d[2] ) < h  
+
+
+                                  ? "11px" : "0px" )   ;
+                     }) ;
+   
+        }
+
+        var zoom = d3.behavior.zoom()
+            .x( xAxisScale )
+            .y( yAxisScale )
+            .scaleExtent([0.25, 2])
+            .on("zoom", zoomed);
+
+        var zoomPoint = d3.behavior.zoom()
+            .x( cxScale )
+            .y( cyScale )
+            .scaleExtent([0.25, 2]) ;
+
+
+        // Create SVG element with maximum size
+            var svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", width)
+                        //.style( "outline", "groove black" )
+                        .attr("height", height).call(zoom);
+                        
+        // Contenedores
+            var chart = svg.append("g")
+                           .attr( "transform", "translate(" + margin.left + ", " + margin.top + ")" );
+
+            var legend = svg.append("g")
+                            .attr( "transform", "translate(" + (w + margin.left + 10) + ", " + margin.top + ")" );
+        
+
+            // Contenedores para axis
+            chart.append("g")
+                 .attr("class", "y axis")
+                 .call(yAxis);  
+            chart.append("g")
+                 .attr("class", "x axis")
+                 .attr("transform", "translate(0," + h + ")")
+                 .call(xAxis);
+
+        //  Legend
+        // ------------------------------------------------------------------------------
+            var sep = 10
+            legend.append("rect")
+                     .attr( "class","legendBorder")      
+                     .attr( "x", 0 )
+                     .attr( "y", 0    )
+                     .attr( "rx", 10 )
+                     .attr( "ry", 10 )
+                     .attr( "width", 130 )
+                     .attr( "height", 3*sep + 2*maxRadius + 2* minRadius );
+
+            legend.append("circle")         
+                    .attr("cx", maxRadius + sep )
+                    .attr("cy", maxRadius + sep )
+                    .attr("r",  maxRadius  )   
+                    .attr("opacity", opacityScale( maxRadius ) )                
+                    .attr("fill", "blue")  
+                    .attr("class", "maxPointLeg") 
+
+            legend.append("circle")         
+                    .attr("cx", maxRadius + sep  )
+                    .attr("cy", 2*maxRadius + minRadius+ 2*sep )
+                    .attr("r",  minRadius  ) 
+                    .attr("opacity", opacityScale( minRadius ) )                  
+                    .attr("fill", "blue")  
+                    .attr("class", "minPointLeg")                                                          
+
+            legend.append("text")
+                     .attr("class", "maxPointLegText")
+                     .text( "Max.: " + maxV )
+                     .attr("x", 2*maxRadius + 2*sep )
+                     .attr("y", maxRadius + sep )
+                     .attr("text-anchor", "start")
+                     .attr("font-family", "sans-serif")
+                     .attr("font-size", "11px")
+                     .attr("fill", "black");  
+
+            legend.append("text")
+                     .attr("class", "minPointLegText")
+                     .text( "Min.: " + minV )
+                     .attr("x",  2*maxRadius + 2*sep )
+                     .attr("y",  2*maxRadius + minRadius+ 2*sep )
+                     .attr("text-anchor", "start")
+                     .attr("font-family", "sans-serif")
+                     .attr("font-size", "11px")
+                     .attr("fill", "black");    
+
+
+            // Punto seleccionado : Mouseover
+            // -------------------------------------------------------------------------        
+
+            legend.append("rect")
+                     .attr( "class","legendBorder")      
+                     .attr( "x", 0 )
+                     .attr( "y", 5*sep + 2*maxRadius + 2* minRadius    )
+                     .attr( "rx", 10 )
+                     .attr( "ry", 10 )
+                     .attr( "width", 130 )
+                     .attr( "height", 2*sep + 2*maxRadius );
+
+            legend.append("text")
+                     .attr("class", "selPointVal")
+                     .text( "" )
+                     .attr("x",  2*maxRadius + sep )
+                     .attr("y",  6*sep + 3*maxRadius + 2* minRadius )
+                     .attr("text-anchor", "start")
+                     .attr("font-family", "sans-serif")
+                     .attr("font-size", "11px")
+                     .attr("fill", "black");
+
+            legend.append("text")
+                     .attr("class", "selPointPos")
+                     .text( "" )
+                     .attr("x",  2*maxRadius + sep )
+                     .attr("y",  6*sep + 3*maxRadius + 2* minRadius + 13 )
+                     .attr("text-anchor", "start")
+                     .attr("font-family", "sans-serif")
+                     .attr("font-size", "11px")
+                     .attr("fill", "black");
+
+            legend.append("circle")         
+                    .attr("cx", maxRadius + sep/2  )
+                    .attr("cy", 6*sep + 3*maxRadius + 2* minRadius )
+                    .attr("r",  0 ) 
+                    .attr("opacity", opacityScale( minRadius ) )                  
+                    .attr("fill", "blue")  
+                    .attr("class", "selectedPoint")                         
+
+
+        // Gráfica de scatterplot
+        // ----------------------------------------------------------------------------------------            
+
+            // Etiquetas
+            chart.selectAll(".labels")
+                 .data(dataset)
+                 .enter()
+                 .append("text")
+                 .attr("class", "labels")
+                 .text(function(d,i) {
+                     return "" + d[0] + "," + d[1];
+                 })
+                 .attr("x", function(d, i) {
+                     return cxScale( d[0] );
+                 })
+                 .attr("y", function(d) {
+                     return cyScale( d[1] ) - radiusScale( d[2] )  - 3;
+                 })
+                 .attr("text-anchor", "middle")
+                 .attr("font-family", "sans-serif")
+                 .attr("font-size", "11px")
+                 .attr("fill", "black"); 
+
+            // Puntos
+            var circ = chart.selectAll("circle")
+                 .data(dataset)
+                 .enter()
+                 .append("circle")
+                 .attr("cx", function(d) {
+                     return cxScale( d[0] );
+                 })
+                 .attr("cy", function(d) {
+                     return cyScale( d[1] );
+                 })
+                 .attr("r", function(d) {
+                     return radiusScale( d[2] )  ;
+                 })    
+                 .attr("opacity", function(d) {
+                     return  opacityScale( radiusScale( d[2] ) );
+                 }) 
+                 .on("mouseover", function(){
+                    d3.select(this)
+                      .attr("r", function(d) {return 1.5*radiusScale(d[2]) ;});  
+                    d3.select(".selectedPoint")
+                      .attr("r", radiusScale( this.__data__[2]) );  
+                    d3.select(".selPointVal")
+                      .text( "Value: " + this.__data__[2] );  
+                    d3.select(".selPointPos")
+                      .text( "x: " + this.__data__[0] + " y: " + this.__data__[1] );                            
+                          
+                 })  
+                 .on("mouseout", function(){
+                     d3.select(this)
+                        .attr("r", function(d) {return radiusScale( d[2] );}); 
+                     d3.select(".selectedPoint")
+                       .attr("r", 0 );   
+                     d3.select(".selPointVal")
+                      .text( "" );  
+                     d3.select(".selPointPos")
+                      .text( "" );                            
+                 })                                 
+                 .attr("fill", "blue")
+                 .attr("class", "data-point") ;
+
+
+        //  Actualizacion de valores
+        // ----------------------------------------------------------------------------------
+
+            d3.select("body")
+              .append("button")
+              .text("Cambiar datos")
+              .on("click", function(){
+
+                // Dynamic, random dataset
+                var numDataPoints = 5 + Math.floor(Math.random() * 25)
+                var xStart = 1  + Math.floor( Math.random() * 200 )
+                var xRange = 50 + Math.floor( Math.random() * 200 )
+                var yStart = 1  + Math.floor( Math.random() * 200 )
+                var yRange = 50 + Math.floor( Math.random() * 200 )
+                var minV   = 1  + Math.floor( Math.random() * 20  )
+                var vRange = 5  + Math.floor( Math.random() * 40  )
+
+                dataset = [];
+                for (var i = 0; i < numDataPoints; i++) {
+                    var newPoint = [    xStart + Math.floor(Math.random() * xRange), 
+                                        yStart + Math.floor(Math.random() * yRange),
+                                        minV   + Math.floor(Math.random() * vRange),
+                                    ]
+                    dataset.push(newPoint);
+                }
+
+                // var dataset = [[cx,cy,r],...] -> 
+                var minX = d3.min( dataset, function(d) { return d[0]; } );
+                var minY = d3.min( dataset, function(d) { return d[1]; } );
+
+                var maxX = d3.max( dataset, function(d) { return d[0]; } );
+                var maxY = d3.max( dataset, function(d) { return d[1]; } );
+
+                var minV = d3.min( dataset, function(d) { return d[2]; } );
+                var maxV = d3.max( dataset, function(d) { return d[2]; } );
+
+                var maxRadius = 20;
+                var minRadius = maxRadius / 2;  
+
+                // Scales
+                radiusScale = d3.scale.linear().domain( [minV, maxV] ).range( [minRadius, maxRadius] );                       
+                cxScale = d3.scale.linear().domain( [minX, maxX] ).range( [maxRadius, w-maxRadius] );
+                cyScale = d3.scale.linear().domain( [minY, maxY] ).range([h-maxRadius, maxRadius]);     // Mirror en eje y   
+                opacityScale = d3.scale.linear().domain( [minRadius, maxRadius] ).range([1,0.5]);     // Mirror en eje y                     
+
+                legend.select(".maxPointLegText").text( "Max.: " + maxV);
+                legend.select(".minPointLegText").text( "Min.: " +minV);
+
+                // Circulos
+                var blackhole = chart.append("circle")
+                        .attr("cx",w/2)
+                        .attr("cy", 30)
+                        .attr("r", 0  )                 
+                        .attr("fill", "black")  
+                        .attr("class", "black-hole") 
+                        .transition().duration(500)   
+                        .attr("r", 30)
+                        .each("end",function() {                
+                            d3.select(this).       
+                              transition().duration(1000).delay(250)        
+                                .attr("cx", maxRadius + (w-2*maxRadius)/2 )
+                                .attr("cy", maxRadius + (h-2*maxRadius)/2 )                                    
+                                .each("end",function() {                
+                                    d3.select(this).       
+                                      transition().duration(1000).delay(250)        
+                                      d3.select(this).remove();                                                                  
+                                })                                                       
+                        });
+
+
+                chart.selectAll(".data-point")
+                    .transition().duration(1000).delay(250)  
+                    .attr("cx", w/2 )
+                    .attr("cy", 30)
+                    .attr("r", 0 )
+                    .each("end",function() {                
+                        d3.select(this).remove();                                                          
+                    });                            
+
+
+                var labels = chart.selectAll(".labels")
+                    .transition().duration(1000).delay(250)  
+                    .attr("x", w/2 )
+                    .attr("y", 30 )
+                    .attr("font-size", "1px")
+                    .each("end",function() {                
+                        d3.select(this).remove();                                                       
+                    }); 
+
+                // Add circles to container
+                circ = chart.selectAll(".data-point2")
+                                 .data(dataset)                                     
+                                 .enter()
+                                 .append("circle")                                  
+                                 .attr("cx", maxRadius + (w-2*maxRadius)/2 )
+                                 .attr("cy", maxRadius + (h-2*maxRadius)/2  )
+                                 .attr("r", 0 )                 
+                                 .attr("fill", "blue")
+                                 .on("mouseover", function(){
+                                    d3.select(this)
+                                      .attr("r", function(d) {return 1.5*radiusScale(d[2]) ;});  
+                                    d3.select(".selectedPoint")
+                                      .attr("r", radiusScale( this.__data__[2]) );  
+                                    d3.select(".selPointVal")
+                                      .text( "Value: " + this.__data__[2] );  
+                                    d3.select(".selPointPos")
+                                      .text( "x: " + this.__data__[0] + " y: " + this.__data__[1] );                            
+                                          
+                                 })  
+                                 .on("mouseout", function(){
+                                     d3.select(this)
+                                        .attr("r", function(d) {return radiusScale( d[2] );}); 
+                                     d3.select(".selectedPoint")
+                                       .attr("r", 0 );   
+                                     d3.select(".selPointVal")
+                                      .text( "" );  
+                                     d3.select(".selPointPos")
+                                      .text( "" );                            
+                                 })                                     
+                                 .transition().duration(1000).delay(1500) 
+                                 .attr("cx", function(d) {
+                                     return cxScale( d[0] );
+                                 })
+                                 .attr("cy", function(d) {
+                                     return cyScale( d[1] );
+                                 })
+                                 .attr("r", function(d) {
+                                     return radiusScale( d[2] );
+                                 })
+                                  .attr("opacity", function(d) {
+                                     return  opacityScale( radiusScale( d[2] ) );
+                                 })
+
+                                 .each("end",function() {                
+                                    d3.select(this).attr("class", "data-point");                                                     
+                                 });  
+
+                // add labels
+                chart.selectAll(".labels2")
+                     .data(dataset)
+                     .enter()
+                     .append("text")
+                     .attr("class", "labels")
+                     .attr("text-anchor", "middle")
+                     .attr("font-family", "sans-serif")
+                     .attr("x",maxRadius + (w-2*maxRadius)/2 )
+                     .attr("y",maxRadius + (h-2*maxRadius)/2 )
+                     .attr("font-size", "11px")
+                     .attr("fill", "black")
+                     .transition().duration(1000).delay(1500) 
+                     .text(function(d,i) {
+                         return "" + d[0] + "," + d[1];
+                     })
+                     .attr("x", function(d, i) {
+                         return cxScale( d[0] );
+                     })
+                     .attr("y", function(d) {
+                         return cyScale( d[1] ) - radiusScale( d[2] )  - 3;
+                     })
+                     .each("end",function() {                
+                        d3.select(this).attr("class", "labels");                                                     
+                     });                           
+
+                // Actualizando axis                 
+
+                yAxisScale.domain([cyScale.invert(h), cyScale.invert(0)]); 
+                xAxisScale.domain([cxScale.invert(0), cxScale.invert(w)]);
+
+                zoom.x( xAxisScale )
+                    .y( yAxisScale )
+                    .scaleExtent([0.5, 10])
+                    .on("zoom", zoomed);
+
+                zoomPoint
+                    .x( cxScale )
+                    .y( cyScale )
+                    .scaleExtent([0.5, 10]) ;                        
+
+                svg.select(".y.axis")
+                   .transition()
+                   .duration(1000).delay(1500) 
+                   .call(yAxis);
+
+
+
+                svg.select(".x.axis")
+                   .transition()
+                   .duration(1000).delay(1500) 
+                   .call(xAxis);
+
+
+
+            });   
+
+    </script>
+    <ul>
+        <li><p>Tamaño variable para cada punto, dependiendo del valor. Opacidad también dependiente del valor.</p></li>
+        <li><p>Etiquetas para cada punto. </p></li>
+        <li><p>Ejes X e Y. </p></li>
+        <li><p>Al menos, un elemento de interactividad:</p> 
+            <ul>
+                <li><p>El punto se destaca aumentando su radio si se pasa el ratón por encima, además </p></li>
+                <li><p>se muestra información sobre la posición y el valor del punto en la leyenda.</p></li>
+                <li><p>Funcionalizad de pan+zoom en la gráfica. </br> - Drag on the canvas to translate/pan the graph.
+</br> - double-click on the canvas to zoom in
+</br> - shift-double-click on the canvas to zoom out</p></li>
+            </ul> 
+        </li>            
+        <li><p>Un botón, que al hacer click, cambien los datos de forma aleatoria.</p>
+            <ul>
+                <li><p>Efecto de "agujero negro" en la transición de los datos. </p></li>
+            </ul> 
+        </li>
+    </ul>     
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Proyecto final de master "Experto en Big Data" de U-Tad</title>
+    <title>Input control - Streaming K-Means</title>
     <!-- D3.js library -->
     <script type="text/javascript" src="d3/d3.min.js"></script>
     <!-- CSS file -->
@@ -15,62 +15,83 @@
     <!-- 						   HTML  													-->
     <!-- ================================================================================= 	-->
 
+    <div id="header" >
+        <h1>Proyecto final de master "Experto en Big Data" de U-Tad</h1>
+        <h2>Distributed Machine Learning Platform - Streaming k-Means algorithm</h2>
+    </div>
+
+
     <!-- ----------------------------------------------------------------------------------- -->
     <div id="inputFront">
 
         <!-- -------------------------------------------------------------------------- -->
-        <div id="inputVisualization" >
+        <div id="connection" >
+            <div id="connectionTitle" >
+                <p class="title">Connection control</p>
+            </div>
+            <div id="inputConnection" >
+                <p><button id="wbInputConnection">Websocket connection</button></p>
+                <p><button id="wbInputClose" disabled >Websocket close</button></p>
+                <p><button id="wbInputSendData" disabled >SendData</button></p>
 
+            </div>
         </div>
 
-
         <!-- -------------------------------------------------------------------------- -->
-        <div id="inputConnection" >
 
-            <p><button id="wbInputConnection">Websocket connection</button></p>
-            <p><button id="wbInputClose" disabled >Websocket close</button></p>
-            <p><button id="wbInputSendData" disabled >SendData</button></p>
+        <div id="modelControl" >
 
-        </div>
-
-
-        <!-- -------------------------------------------------------------------------- -->
-        <div id="inputControls" >
-
-            <div id="controlSelectedGauss" >
-
-                <p style="text-align: center"> Gaussian component</p>
-
-                <p>
-                    <label class="disabledElem" for="gauss_P"
-                           style="display: inline-block; text-align: right; width: 150px;">
-                        Probability = <span id="gauss_P-value"></span>
-                    </label>
-                    <input class="disabledElem" type="number" min="0" max="1" step="0.01" value="0.33" id="gauss_P">
-                </p>
-
-                <p>
-                    <label class="disabledElem" for="gauss_xMean"
-                           style="display: inline-block; text-align: right; width: 150px;">
-                        mean.x = <span id="gauss_xMean-value"></span>
-                    </label>
-                    <input class="disabledElem" type="number" min="-100" max="100" step="1" value="-5" id="gauss_xMean">
-                </p>
-
-                <p>
-                    <label class="disabledElem" for="gauss_yMean"
-                            style="display: inline-block; text-align: right; width: 150px;">
-                        mean.y = <span id="gauss0_yMean-value"></span>
-                    </label>
-                    <input class="disabledElem" type="number" min="-100" max="100" step="1" value="-5" id="gauss_yMean">
-                </p>
+            <div id="modelControlTitle" >
+                <p class="title">Synthetic data model control</p>
             </div>
 
-            <div id="controlNumGaussComp" >
-                <p><button id="newGauss">New gaussian component</button></p>
-                <p><button class="disabledElem" id="removeGauss" disabled>Remove gaussian component</button></p>
+            <div id="inputVisualization" >
+
             </div>
 
+            <!-- -------------------------------------------------------------------------- -->
+            <div id="inputControls" >
+
+                <div id="controlSelectedGauss" >
+
+                    <p style="text-align: center"> Gaussian component</p>
+
+                    <table align="center" class="tGaussControl">
+                        <!-- Mean X -->
+                        <tr>
+                            <td><img src="images/meanX.png" height="40" align="middle"/></td>
+                            <td><input class="disabledElem" type="number" min="-100" max="100" step="1" value="-5" id="gauss_xMean" ></td>
+                        </tr>
+                        <!-- Mean Y -->
+                        <tr>
+                            <td><img src="images/meanY.png" height="60" align="middle"/></td>
+                            <td><input class="disabledElem" type="number" min="-100" max="100" step="1" value="-5" id="gauss_yMean"></td>
+                        </tr>
+                        <!-- Std X -->
+                        <tr>
+                            <td><img src="images/stdX.png" height="45" align="middle"/></td>
+                            <td><input class="disabledElem" type="number" min="0.1" max="10" step="0.1" value="1" id="gauss_xStd"></td>
+                        </tr>
+                        <!-- Std Y -->
+                        <tr>
+                            <td><img src="images/stdY.png" height="60" align="middle"/></td>
+                            <td><input class="disabledElem" type="number" min="0.1" max="10" step="0.1" value="1" id="gauss_yStd"></td>
+                        </tr>
+                        <!-- Correlation-->
+                        <tr>
+                            <td><img src="images/cor.png" height="60" align="middle"/></td>
+                            <td><input class="disabledElem" type="number" min="-0.95" max="0.95" step="0.05" value="0" id="cor"></td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div id="controlNumGaussComp" >
+                    <p><button id="newGauss">New gaussian component</button></p>
+                    <p><button class="disabledElem" id="removeGauss" disabled>Remove gaussian component</button></p>
+                </div>
+
+            </div>
         </div>
 
     </div>
@@ -78,7 +99,9 @@
 
     <!-- 						Javascript 													-->
     <!-- ================================================================================= 	-->
-
+    <script type="text/javascript" src="gaussianEllipsis/numeric.js"></script>
+    <script type="text/javascript" src="gaussianEllipsis/jstat.js"></script>
+    <script type="text/javascript" src="gaussianEllipsis/ellipsis.js"></script>
     <script type="text/javascript" src="inputOnlineKMeansFront.js"></script>
 
 
