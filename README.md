@@ -27,4 +27,4 @@ El desarrollo del presente trabajo final de curso se ha dividido en las siguient
 
 ## Arquitectura y tecnologías del prototipo propuesto
 
-![Image of architecture](/imagenes/arquitectura.png)
+![Image of architecture](/Imagenes/Arquitectura.png)
