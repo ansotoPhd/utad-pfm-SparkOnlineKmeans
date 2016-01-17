@@ -5,7 +5,7 @@ El objetivo del trabajo final del curso “Experto en Big Data” es el de reali
 
 Autor: Antonio Soriano Tolosa.  E-mail: ansoto.phd@gmail.com
 
-Continido también accesible en: https://drive.google.com/open?id=0B7eY4Ec5HGFAZnhtYzk2RGhaRW8
+Contenido también accesible en: https://drive.google.com/open?id=0B7eY4Ec5HGFAZnhtYzk2RGhaRW8
 En google drive se pueden encontrar vídeos demostrativos con el funcionamiento del prototipo creado.
 
 ----------------------------------------
