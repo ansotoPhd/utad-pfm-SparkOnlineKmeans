@@ -2,6 +2,12 @@
 
 El objetivo del trabajo final del curso “Experto en Big Data” es el de realizar un proyecto en el que se ponga en práctica alguno o varios de los conceptos y tecnologías aprendidos en el programa, alentando a los alumnos a que, en caso de ser posible, incluyan otras tecnologías Big Data no vistas durante el curso. 
 
+
+Autor: Antonio Soriano Tolosa.  E-mail: ansoto.phd@gmail.com
+
+Continido también accesible en: https://drive.google.com/open?id=0B7eY4Ec5HGFAZnhtYzk2RGhaRW8
+En google drive se pueden encontrar vídeos demostrativos con el funcionamiento del prototipo creado.
+
 ----------------------------------------
 
 # Técnicas de Machine Learning en Spark Streaming
