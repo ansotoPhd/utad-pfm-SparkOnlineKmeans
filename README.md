@@ -12,7 +12,7 @@ La libreria de machine learning incorporada en Apache Spark (MLlib) contiene una
 
 El desarrollo del presente trabajo final de curso se ha dividido en las siguientes etapas:
 
-* Estudio teórico del modelo de clustering K-Means y del algoritmo de Lloyd, uno de los más utilizados en la resolución del problema de optimización que se plantea en el entrenamiento del modelo. El algoritmo de Lloyd es un algoritmo de procesado *Batch* que utiliza una técnica de refinamiento iterativo basada en descenso por gradiente para la resolución del problema de optimización. 
+* Estudio teórico del modelo de clustering K-Means y del algoritmo de Lloyd, uno de los más utilizados en la resolución del problema de optimización que se plantea para entrenamiento del modelo. El algoritmo de Lloyd es un algoritmo de procesado *Batch* que utiliza una técnica de refinamiento iterativo basada en descenso por gradiente para la resolución del problema de optimización. 
 
 * Estudio de la variante del algoritmo de Lloyd para la resolución del problema utilizando *Mini-Batches*.
 
@@ -21,3 +21,10 @@ El desarrollo del presente trabajo final de curso se ha dividido en las siguient
 * Implementación pŕactica de una aplicación de test que posibilite la comparación entre las versiones *Batch* y *Mini-Batch* del algoritmo.
 
 * Implementación de un prototipo de sistema de procesado de datos en streaming donde se utilice el algoritmo *Streaming K-Means*.
+
+
+----------------------------------------
+
+## Arquitectura y tecnologías del prototipo propuesto
+
+![Image of architecture](/imagenes/arquitectura.png)
